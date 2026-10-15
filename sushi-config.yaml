@@ -1,0 +1,37 @@
+# Open Animal Nutrition — Adequacy Interoperability Guide
+# v0.1 SCAFFOLD — UNVALIDATED. Run `sushi init` first to generate ig.ini/templates,
+# then drop input/fsh/* in and run `sushi .` followed by the IG Publisher to validate.
+id: openanimalnutrition.fhir.animalnutrition
+canonical: https://openanimalnutrition.org/fhir/animal-nutrition
+name: OpenAnimalNutrition
+title: "Open Animal Nutrition — Adequacy Interoperability Guide"
+description: >-
+  A FHIR Implementation Guide for representing and verifying the nutritional
+  adequacy of an animal diet against published requirement standards (NRC,
+  AAFCO, FEDIAF), expressed on a common mathematical basis. Species-agnostic by
+  design; v0.1 binds canine and feline coverage. This guide models the adequacy
+  VERDICT, not the means of producing a passing diet.
+status: draft
+version: 0.1.0
+fhirVersion: 5.0.0
+copyrightYear: 2026+
+releaseLabel: ci-build
+license: CC0-1.0
+publisher:
+  name: "DVM Consulting, Inc. (provisional steward)"
+  url: https://openanimalnutrition.org
+# Global, not US-realm:
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001
+
+# No external IG dependencies for the minimal slice; core FHIR R5 only.
+
+parameters:
+  show-inherited-invariants: false
+
+pages:
+  index.md:
+    title: Open Animal Nutrition
+
+menu:
+  Home: index.html
+  Artifacts: artifacts.html
