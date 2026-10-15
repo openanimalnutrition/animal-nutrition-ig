@@ -30,7 +30,7 @@ Title: "Adult-maintenance adequacy, canine, vs AAFCO"
 * component[=].referenceRange.low = 1.25 'g/Mcal'
 * component[=].referenceRange.high = 6.25 'g/Mcal'
 * component[=].extension[maxProvenance].valueCode = #authoritative
-* component[=].extension[decile].valueInteger = 2       // 15% of min-to-max range
+* component[=].extension[decile].valueCode = #range-d2   // 15% of min-to-max range
 // --- potassium: adequate; DERIVED-PROVISIONAL ceiling (AAFCO sets no max; 4x min rule) ---
 * component[+].code = AnimalNutrientCS#potassium
 * component[=].valueQuantity = 2.5 'g/Mcal'
@@ -38,4 +38,4 @@ Title: "Adult-maintenance adequacy, canine, vs AAFCO"
 * component[=].referenceRange.low = 1.5 'g/Mcal'
 * component[=].referenceRange.high = 6.0 'g/Mcal'
 * component[=].extension[maxProvenance].valueCode = #derived-provisional
-* component[=].extension[decile].valueInteger = 3       // 22% of min-to-max range
+* component[=].extension[decile].valueCode = #range-d3   // 22% of min-to-max range

@@ -36,6 +36,7 @@ Context: Observation.component
 Extension: NutrientDecile
 Id: nutrient-decile
 Title: "Nutrient Decile (Common-Basis Expression)"
-Description: "The diet's level for this nutrient expressed on the common mathematical basis used to compare across standards. TODO: pin the basis and the computation in the conformance spec (this is the single decision that carries the standard's neutrality). The proposed basis also defines four bands below the minimum, which a 1..10 integer cannot express."
+Description: "The diet's level for this nutrient on the common mathematical basis used to compare across standards, expressed as a band of the Dynamic Decile System: four bands below the minimum and ten deciles from the minimum to the range high. A value above the range high is reported as range-d10 (Highest). TODO: pin the basis and the computation in the conformance spec (this is the single decision that carries the standard's neutrality)."
 Context: Observation.component
-* value[x] only integer    // 1..10 — TODO confirm integer vs decimal, and how below-minimum bands are represented
+* value[x] only code
+* valueCode from NutrientDecileVS (required)

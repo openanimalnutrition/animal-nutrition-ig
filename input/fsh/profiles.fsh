@@ -21,6 +21,12 @@ Ratio nutrients such as Ca:P are components like any other nutrient, with a
 unitless quantity (UCUM `1`). Non-linear ratio nutrients are excluded from the
 component model by design.
 
+A component's interpretation is `excess` only when the value is above a maximum
+or safe upper limit set by the applied standard (maxProvenance `authoritative`).
+Above a derived-provisional ceiling the interpretation stays `adequate`; the
+value is still flagged by its decile band, `range-d10` ("Highest (90% of Range
+or Greater)"), and referenceRange.high holds the derived ceiling it exceeds.
+
 SCOPE: this profile models the VERDICT. Ingredient selection, fortification,
 and rounding (i.e. how a passing diet is produced) are out of scope by design.
 """
