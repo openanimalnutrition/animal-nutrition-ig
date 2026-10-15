@@ -17,6 +17,10 @@ min/max requirement range, the common-basis decile expression, and a
 per-nutrient interpretation. The top-level interpretation is the overall
 complete-and-balanced verdict.
 
+Ratio nutrients such as Ca:P are components like any other nutrient, with a
+unitless quantity (UCUM `1`). Non-linear ratio nutrients are excluded from the
+component model by design.
+
 SCOPE: this profile models the VERDICT. Ingredient selection, fortification,
 and rounding (i.e. how a passing diet is produced) are out of scope by design.
 """
@@ -47,6 +51,4 @@ and rounding (i.e. how a passing diet is produced) are out of scope by design.
     MaximumProvenance named maxProvenance 0..1 MS and
     NutrientDecile named decile 0..1 MS
 
-// TODO v0.2: slice `component` by nutrient; decide explicit handling for ratio
-// nutrients (Ca:P) and exclude non-linear ratios from the component model per
-// the conformance spec.
+// TODO v0.2: slice `component` by nutrient.
