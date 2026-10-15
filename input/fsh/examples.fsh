@@ -5,6 +5,7 @@ Instance: ExampleCaninePatient
 InstanceOf: Patient
 Usage: #example
 Title: "Example canine patient"
+Description: "A dog, with species carried by the R5 patient-animal extension."
 * active = true
 * gender = #female
 // Species: R5 dropped Patient.animal; the patient-animal extension is in the R5 extensions pack.
@@ -16,6 +17,7 @@ Instance: ExampleAdultMaintenanceAdequacy
 InstanceOf: AnimalNutrientAdequacy
 Usage: #example
 Title: "Adult-maintenance adequacy, canine, vs AAFCO"
+Description: "Adequacy of a canine adult-maintenance diet against AAFCO, with one nutrient under an authoritative maximum (calcium) and one under a derived-provisional ceiling (potassium)."
 * status = #final
 * extension[appliedStandard].valueCodeableConcept = RequirementStandardCS#AAFCO
 * extension[lifeStage].valueCodeableConcept = LifeStageCS#adult-maintenance
