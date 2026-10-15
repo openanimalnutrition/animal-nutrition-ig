@@ -5,10 +5,9 @@ against NRC / AAFCO / FEDIAF on a common basis. This guide models the
 **verdict**, not diet production.
 
 ## ⚠️ Status: UNVALIDATED scaffold
-This skeleton was hand-authored and has **not** been compiled with SUSHI or the
-IG Publisher. Expect to fix FSH on first compile. `TODO` markers flag the known
-soft spots (UCUM units, the R5 patient-animal species mechanism,
-integer-vs-decimal for the decile, component slicing, ratio-nutrient handling).
+This skeleton was hand-authored. It now compiles with SUSHI and builds with the
+IG Publisher, but its content has not been validated. `TODO` markers flag what
+remains open (component slicing, nutrient and species bindings).
 
 ## Locked configuration
 - canonical: `https://openanimalnutrition.org/fhir/animal-nutrition`
@@ -17,15 +16,17 @@ integer-vs-decimal for the decile, component slicing, ratio-nutrient handling).
 - FHIR version: 5.0.0 (migrate to R6 when tooling lands, ~late 2026)
 
 ## Build
+Needs Java 17+, Node.js with SUSHI (`npm install -g fsh-sushi`), and Ruby with
+Jekyll (the IG Publisher still renders pages with Jekyll).
 ```
-# 1. scaffold the canonical project layout (ig.ini, templates, etc.)
-sushi init
-
-# 2. drop these input/fsh/* files in and compile FSH -> FHIR JSON
+# 1. compile FSH -> FHIR JSON (optional: the IG Publisher runs SUSHI itself)
 sushi .
 
-# 3. build + validate the full IG site (needs Java + IG Publisher)
-./_genonce.sh        # or _genonce.bat on Windows
+# 2. download or update the IG Publisher
+./_updatePublisher.sh   # or _updatePublisher.bat on Windows
+
+# 3. build + validate the full IG site; QA report at output/qa.html
+./_genonce.sh           # or _genonce.bat on Windows
 ```
 
 ## Layout
