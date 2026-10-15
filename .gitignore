@@ -1,0 +1,8 @@
+/output/
+/temp/
+/template/
+/input-cache/
+/fsh-generated/
+publisher.jar
+.DS_Store
+Thumbs.db
