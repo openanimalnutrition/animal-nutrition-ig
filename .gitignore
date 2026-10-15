@@ -4,5 +4,6 @@
 /input-cache/
 /fsh-generated/
 publisher.jar
+/Requirements-fromNarrative.json
 .DS_Store
 Thumbs.db

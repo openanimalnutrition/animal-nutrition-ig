@@ -3,3 +3,18 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+
+# OIDs need an OID root registered for the steward; that registration is an open governance step.
+%should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+# Inherited from core R5 Observation, whose category value set is marked experimental; this profile does not constrain category.
+The definition for the element 'Observation.category' binds to the value set 'http://hl7.org/fhir/ValueSet/observation-category|5.0.0' which is experimental, but this structure is not labeled as experimental
+
+# Inherited from core R5 Observation, whose referenceRange.type value set is marked experimental; this profile does not constrain it.
+The definition for the element 'Observation.referenceRange.type' binds to the value set 'http://hl7.org/fhir/ValueSet/referencerange-meaning|5.0.0' which is experimental, but this structure is not labeled as experimental
+
+# Same core binding on the component's referenceRange.type; not constrained here.
+The definition for the element 'Observation.component.referenceRange.type' binds to the value set 'http://hl7.org/fhir/ValueSet/referencerange-meaning|5.0.0' which is experimental, but this structure is not labeled as experimental
+
+# The example records a computed verdict; who or what performs the check is not modeled yet (open item).
+Best Practice Recommendation: In general, all observations should have a performer
