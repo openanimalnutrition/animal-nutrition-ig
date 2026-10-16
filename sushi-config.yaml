@@ -1,6 +1,5 @@
 # Open Animal Nutrition — Adequacy Interoperability Guide
-# v0.1 SCAFFOLD — UNVALIDATED. Run `sushi init` first to generate ig.ini/templates,
-# then drop input/fsh/* in and run `sushi .` followed by the IG Publisher to validate.
+# v0.1 SCAFFOLD — UNVALIDATED. Build: `sushi .`, then the IG Publisher (see README).
 id: openanimalnutrition.fhir.animalnutrition
 canonical: https://openanimalnutrition.org/fhir/animal-nutrition
 name: OpenAnimalNutrition
@@ -23,7 +22,9 @@ publisher:
 # Global, not US-realm:
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001
 
-# No external IG dependencies for the minimal slice; core FHIR R5 only.
+# R5 removed Patient.animal; its replacement, the patient-animal extension, ships in the R5 extensions pack.
+dependencies:
+  hl7.fhir.uv.extensions.r5: 5.3.0
 
 parameters:
   show-inherited-invariants: false

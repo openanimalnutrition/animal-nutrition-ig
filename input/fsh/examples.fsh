@@ -5,10 +5,10 @@ Instance: ExampleCaninePatient
 InstanceOf: Patient
 Usage: #example
 Title: "Example canine patient"
+Description: "A dog, with species carried by the R5 patient-animal extension."
 * active = true
 * gender = #female
-// Species: R5 dropped Patient.animal; use the patient-animal extension pack.
-// TODO confirm the exact R5 mechanism / extension URL before publishing.
+// Species: R5 dropped Patient.animal; the patient-animal extension is in the R5 extensions pack.
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-animal"
 * extension[=].extension[0].url = "species"
 * extension[=].extension[=].valueCodeableConcept = AnimalSpeciesCS#canine
@@ -17,6 +17,7 @@ Instance: ExampleAdultMaintenanceAdequacy
 InstanceOf: AnimalNutrientAdequacy
 Usage: #example
 Title: "Adult-maintenance adequacy, canine, vs AAFCO"
+Description: "Adequacy of a canine adult-maintenance diet against AAFCO, with one nutrient under an authoritative maximum (calcium) and one under a derived-provisional ceiling (potassium)."
 * status = #final
 * extension[appliedStandard].valueCodeableConcept = RequirementStandardCS#AAFCO
 * extension[lifeStage].valueCodeableConcept = LifeStageCS#adult-maintenance
@@ -24,19 +25,19 @@ Title: "Adult-maintenance adequacy, canine, vs AAFCO"
 * subject = Reference(ExampleCaninePatient)
 * effectiveDateTime = "2026-06-21"
 * interpretation = AdequacyInterpretationCS#complete-balanced
-// --- calcium: adequate; AUTHORITATIVE maximum (AAFCO 1.25 to 6.25 g/1000 kcal) ---
+// --- calcium: adequate; AUTHORITATIVE maximum (AAFCO 1.25 to 6.25 g/1000 kcal, i.e. g/Mcal) ---
 * component[0].code = AnimalNutrientCS#calcium
-* component[=].valueQuantity = 2.0 'g/1000kcal'        // TODO confirm UCUM unit/basis
+* component[=].valueQuantity = 2.0 'g/Mcal'
 * component[=].interpretation = AdequacyInterpretationCS#adequate
-* component[=].referenceRange.low.value = 1.25
-* component[=].referenceRange.high.value = 6.25
+* component[=].referenceRange.low = 1.25 'g/Mcal'
+* component[=].referenceRange.high = 6.25 'g/Mcal'
 * component[=].extension[maxProvenance].valueCode = #authoritative
-* component[=].extension[decile].valueInteger = 2       // 15% of min-to-max range
+* component[=].extension[decile].valueCode = #range-d2   // 15% of min-to-max range
 // --- potassium: adequate; DERIVED-PROVISIONAL ceiling (AAFCO sets no max; 4x min rule) ---
 * component[+].code = AnimalNutrientCS#potassium
-* component[=].valueQuantity = 2.5 'g/1000kcal'        // TODO confirm UCUM unit/basis
+* component[=].valueQuantity = 2.5 'g/Mcal'
 * component[=].interpretation = AdequacyInterpretationCS#adequate
-* component[=].referenceRange.low.value = 1.5
-* component[=].referenceRange.high.value = 6.0
+* component[=].referenceRange.low = 1.5 'g/Mcal'
+* component[=].referenceRange.high = 6.0 'g/Mcal'
 * component[=].extension[maxProvenance].valueCode = #derived-provisional
-* component[=].extension[decile].valueInteger = 3       // 22% of min-to-max range
+* component[=].extension[decile].valueCode = #range-d3   // 22% of min-to-max range
