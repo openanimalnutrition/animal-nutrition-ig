@@ -12,6 +12,3 @@ The definition for the element 'Observation.referenceRange.type' binds to the va
 
 # Same core binding on the component's referenceRange.type; not constrained here.
 The definition for the element 'Observation.component.referenceRange.type' binds to the value set 'http://hl7.org/fhir/ValueSet/referencerange-meaning|5.0.0' which is experimental, but this structure is not labeled as experimental
-
-# The example records a computed verdict; who or what performs the check is not modeled yet (open item).
-Best Practice Recommendation: In general, all observations should have a performer

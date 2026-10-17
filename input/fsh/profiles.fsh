@@ -27,6 +27,15 @@ Above a derived-provisional ceiling the interpretation stays `adequate`; the
 value is still flagged by its decile band, `range-d10` ("Highest (90% of Range
 or Greater)"), and referenceRange.high holds the derived ceiling it exceeds.
 
+`performer` is optional. When a veterinarian, nutritionist or clinic ran or
+reviewed the check, name them (Practitioner, PractitionerRole or Organization).
+The organization that only operates the checking software is not the performer
+unless it also reviewed this verdict. Software cannot be the performer of an
+Observation in FHIR R5 (`performer` does not accept a Device). When software
+computed the verdict, record it in `device`: a Device whose `name` and
+`version` give the software's name and version, so a reader can tell which
+checker, and which version of it, produced the verdict.
+
 SCOPE: this profile models the VERDICT. Ingredient selection, fortification,
 and rounding (i.e. how a passing diet is produced) are out of scope by design.
 """
@@ -39,6 +48,12 @@ and rounding (i.e. how a passing diet is produced) are out of scope by design.
 * subject 1..1 MS
 * subject only Reference(Patient)          // animal Patient; reuse core animal support
 * effective[x] MS
+* performer MS
+* performer only Reference(Practitioner or PractitionerRole or Organization)
+* performer ^short = "Veterinarian, nutritionist or clinic who ran or reviewed the check (optional)"
+* device MS
+* device only Reference(Device)
+* device ^short = "Software that computed the verdict, with its name and version (optional)"
 * interpretation 1..1 MS                    // overall complete-and-balanced verdict
 * interpretation from AdequacyInterpretationVS (required)
 * component MS

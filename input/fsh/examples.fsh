@@ -13,6 +13,23 @@ Description: "A dog, with species carried by the R5 patient-animal extension."
 * extension[=].extension[0].url = "species"
 * extension[=].extension[=].valueCodeableConcept = AnimalSpeciesCS#canine
 
+Instance: ExampleVeterinarian
+InstanceOf: Practitioner
+Usage: #example
+Title: "Example veterinarian"
+Description: "A placeholder veterinarian who ran or reviewed the check."
+* active = true
+* name.text = "Example Veterinarian"
+
+Instance: ExampleAdequacyChecker
+InstanceOf: Device
+Usage: #example
+Title: "Example checking software"
+Description: "A placeholder for the software that computed the verdict, with its name and version."
+* name.value = "Example Adequacy Checker"
+* name.type = #user-friendly-name
+* version.value = "1.0.0"
+
 Instance: ExampleAdultMaintenanceAdequacy
 InstanceOf: AnimalNutrientAdequacy
 Usage: #example
@@ -24,6 +41,8 @@ Description: "Adequacy of a canine adult-maintenance diet against AAFCO, with on
 * code = OANAssessmentCS#diet-adequacy
 * subject = Reference(ExampleCaninePatient)
 * effectiveDateTime = "2026-06-21"
+* performer = Reference(ExampleVeterinarian)
+* device = Reference(ExampleAdequacyChecker)
 * interpretation = AdequacyInterpretationCS#complete-balanced
 // --- calcium: adequate; AUTHORITATIVE maximum (AAFCO 1.25 to 6.25 g/1000 kcal, i.e. g/Mcal) ---
 * component[0].code = AnimalNutrientCS#calcium
