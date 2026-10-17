@@ -28,6 +28,9 @@ dependencies:
 
 parameters:
   show-inherited-invariants: false
+  # OID root that HL7 assigned to this package id (FHIR IG Registry, oid-assignments.json).
+  # The IG Publisher records the OIDs it derives from it in oids.ini, which must be committed.
+  auto-oid-root: 2.16.840.1.113883.4.642.40.1004
 
 pages:
   index.md:
