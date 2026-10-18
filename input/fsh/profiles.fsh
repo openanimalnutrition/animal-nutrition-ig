@@ -14,18 +14,31 @@ given species and life stage.
 
 Each assessed nutrient is a component carrying the diet's level, the applicable
 min/max requirement range, the common-basis decile expression, and a
-per-nutrient interpretation. The top-level interpretation is the overall
-complete-and-balanced verdict.
+per-nutrient interpretation. The decile expression is computed as stated,
+proposed and pending ratification, on the
+[Decile Basis and Band Computation](band-computation.html) page. The top-level
+interpretation is the overall complete-and-balanced verdict.
 
 Ratio nutrients such as Ca:P are components like any other nutrient, with a
 unitless quantity (UCUM `1`). Non-linear ratio nutrients are excluded from the
 component model by design.
 
 A component's interpretation is `excess` only when the value is above a maximum
-or safe upper limit set by the applied standard (maxProvenance `authoritative`).
-Above a derived-provisional ceiling the interpretation stays `adequate`; the
-value is still flagged by its decile band, `range-d10` ("Highest (90% of Range
-or Greater)"), and referenceRange.high holds the derived ceiling it exceeds.
+or safe upper limit set by the applied standard (maxProvenance `authoritative`)
+and not below a minimum set by the applied standard, including one raised for a
+caloric restriction (below). Above a derived-provisional ceiling the
+interpretation stays `adequate`. The band is then `range-d10` ("Highest (90% of
+Range or Greater)"), which alone does not show that the ceiling was exceeded:
+referenceRange.high holds the derived ceiling, and maxProvenance says it is
+`derived-provisional`.
+
+Where a caloric restriction raises a minimum set by the applied standard,
+referenceRange.low holds the raised minimum, and the band is computed from it. A
+value below it is `deficient`, even if it meets the minimum that applies with no
+restriction. A verdict checked under a caloric restriction above 0 records the
+percentage in `caloricRestriction`. This rule, the condition on `excess` above,
+and which minimums they cover are stated, proposed and pending ratification, on
+the [Decile Basis and Band Computation](band-computation.html) page.
 
 `performer` is optional. When a veterinarian, nutritionist or clinic ran or
 reviewed the check, name them (Practitioner, PractitionerRole or Organization).
@@ -41,7 +54,8 @@ and rounding (i.e. how a passing diet is produced) are out of scope by design.
 """
 * extension contains
     AppliedRequirementStandard named appliedStandard 1..1 MS and
-    NutrientLifeStage named lifeStage 1..1 MS
+    NutrientLifeStage named lifeStage 1..1 MS and
+    CaloricRestriction named caloricRestriction 0..1 MS
 * status MS
 * code 1..1 MS
 * code = OANAssessmentCS#diet-adequacy
@@ -66,7 +80,7 @@ and rounding (i.e. how a passing diet is produced) are out of scope by design.
 * component.interpretation 1..1 MS
 * component.interpretation from AdequacyInterpretationVS (required)
 * component.referenceRange MS
-* component.referenceRange.low ^short = "Requirement minimum (authoritative)"
+* component.referenceRange.low ^short = "Requirement minimum"
 * component.referenceRange.high ^short = "Maximum (authoritative OR derived-provisional)"
 * component.extension contains
     MaximumProvenance named maxProvenance 0..1 MS and
