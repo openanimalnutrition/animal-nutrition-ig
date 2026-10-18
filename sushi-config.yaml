@@ -35,7 +35,10 @@ parameters:
 pages:
   index.md:
     title: Open Animal Nutrition
+  band-computation.md:
+    title: "Decile Basis and Band Computation (proposed, pending ratification)"
 
 menu:
   Home: index.html
+  "Band Computation (proposed)": band-computation.html
   Artifacts: artifacts.html

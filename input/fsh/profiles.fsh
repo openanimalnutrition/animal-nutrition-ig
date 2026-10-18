@@ -14,8 +14,10 @@ given species and life stage.
 
 Each assessed nutrient is a component carrying the diet's level, the applicable
 min/max requirement range, the common-basis decile expression, and a
-per-nutrient interpretation. The top-level interpretation is the overall
-complete-and-balanced verdict.
+per-nutrient interpretation. The decile expression is computed as stated,
+proposed and pending ratification, on the
+[Decile Basis and Band Computation](band-computation.html) page. The top-level
+interpretation is the overall complete-and-balanced verdict.
 
 Ratio nutrients such as Ca:P are components like any other nutrient, with a
 unitless quantity (UCUM `1`). Non-linear ratio nutrients are excluded from the

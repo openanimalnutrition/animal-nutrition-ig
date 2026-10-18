@@ -83,7 +83,7 @@ Description: "All codes in the Adequacy Interpretation code system."
 CodeSystem: NutrientDecileCS
 Id: nutrient-decile
 Title: "Nutrient Decile Bands"
-Description: "The 14 bands of the Dynamic Decile System: four bands below the requirement minimum, as a share of the minimum, and ten deciles from the minimum to the range high. A value above the range high is reported as range-d10."
+Description: "The 14 bands of the Dynamic Decile System: four bands below the requirement minimum, as a share of the minimum, and ten deciles from the minimum to the range high. A value above the range high is reported as range-d10. The computation is stated, proposed and pending ratification, on the [Decile Basis and Band Computation](band-computation.html) page."
 * ^caseSensitive = true
 * ^experimental = false
 * #below-min-lt25 "Very Severely Restricted (<25% of Min)"
@@ -111,7 +111,7 @@ Description: "All codes in the Nutrient Decile Bands code system."
 CodeSystem: AnimalNutrientCS
 Id: animal-nutrient
 Title: "Animal Nutrients (STUB)"
-Description: "STUB. Populate from the canonical nutrient list; map to SNOMED-vet / LOINC where possible. Ratio nutrients (e.g. Ca:P) need explicit handling and non-linear ratios are excluded per the conformance spec."
+Description: "STUB. Populate from the canonical nutrient list; map to SNOMED-vet / LOINC where possible. Ratio nutrients (e.g. Ca:P) need explicit handling, and non-linear ratios are excluded from the component model by design (see the [Animal Nutrient Adequacy Assessment](StructureDefinition-animal-nutrient-adequacy.html) profile). Which ratios count as non-linear is an open point on the [Decile Basis and Band Computation](band-computation.html) page."
 * ^caseSensitive = true
 * ^experimental = false
 * #protein "Crude protein"
