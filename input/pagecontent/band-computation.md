@@ -26,10 +26,14 @@ computation uses.
 
 The page is written for implementers (people, software and AI checkers) who
 need to get the same band for the same input, and for reviewers of the
-proposal. It states only what the template computes. Where the template
-is silent, the point is listed under [Open points](#open-points) and is not
-decided here. The template gives bands, not verdicts: the adequacy
-interpretation codes are this guide's own.
+proposal. It states what the template computes. It also states the provisional
+steward's own rules for a check under a caloric restriction, and for the
+arginine and large-breed puppy calcium minimums (see
+[Bands and the adequacy interpretation](#bands-and-the-adequacy-interpretation)).
+Like the rest of the page, these rules are pending ratification. Where the
+template is silent and no such rule is stated, the point is listed under
+[Open points](#open-points) and is not decided here. The template gives bands,
+not verdicts: the adequacy interpretation codes are this guide's own.
 
 ### The basis
 
@@ -143,27 +147,85 @@ the MBW row follows the same rule on its own basis:
 
 #### Caloric restriction
 
-An intentional caloric restriction of 0 to 55% can be entered. The template then
-multiplies the standard's per-Mcal minimums by 1 ÷ (1 − restriction ÷ 100),
-computing that factor first, so that the restricted intake still supplies the
-same daily amount. At 25%, each such minimum is multiplied by 4/3.
+An intentional caloric restriction can be entered as a percentage of the
+animal's energy need, from 0 to 55 (cell G10): 25 means that the animal is fed
+25% less energy than it needs. This percentage is the only way the template
+takes a restriction. The template then multiplies the standard's per-Mcal
+minimums by 1 ÷ (1 − restriction ÷ 100), computing that factor first, so that
+the restricted intake still supplies the same daily amount. At 25%, each such
+minimum is multiplied by 4/3.
 
-- Not adjusted: the MBW rows, energy, energy density, water, vitamin C,
+- Not adjusted: the MBW rows (below), energy, energy density, water, vitamin C,
   carbohydrate, the fibers, oxalate, purine, the standard's minimums for the
-  three ratio rows (only Ca:P has any), and ALA's own minimum (its floor from
-  the LA minimum does move). The template's notes on both ALA rows flag the
-  unadjusted ALA minimum as a limitation ("works except not for nutrient
-  enhancement when caloric restriction entered").
-- The large-breed puppy calcium minimum is adjusted too, including its floor of
-  3, and its maximum (1.1 times that minimum above 4.5) follows it.
+  three ratio rows (only Ca:P has any), and ALA's own minimum (under the four
+  NRC dog selections, its floor from the LA minimum does move). The template's
+  notes on both ALA rows flag the unadjusted ALA minimum as a limitation ("works
+  except not for nutrient enhancement when caloric restriction entered"). On the
+  per-Mcal ALA row, this gap is for the template's next version to close (see
+  [Open points](#open-points), item 20). The ALA MBW row, like every MBW row,
+  follows separate requirements (below), so this guide does not count it as a
+  gap.
+- When the percentage is entered without an intake in place of the
+  calculated requirement (below), the energy minimum stays the calculated
+  requirement. A planned restricted intake entered as the energy row's diet
+  value therefore reads below it. Whether that is `deficient` is open (see
+  [Open points](#open-points), item 6).
+- The large-breed puppy calcium minimum, the larger of 3 g/Mcal and a
+  body-weight term (0.54 g of calcium per kg of body weight a day, converted
+  to g/Mcal with the daily energy; see
+  [Limits the template sets or computes](#limits-the-template-sets-or-computes)),
+  is adjusted too: the 3 always, and the body-weight term only when no intake
+  is entered in place of the calculated requirement (below). Converted with
+  such an intake, that term already supplies 0.54 g of calcium per kg of body
+  weight a day at that intake. Its maximum (4.5, or 1.1 times the minimum when
+  the minimum is above 4.5) follows it.
 - Maximums taken from a standard are not adjusted. Limits that the template
   computes from other rows use the adjusted minimums, and a range high of the
   minimum times K follows the adjusted minimum.
+- For arginine (NRC and FEDIAF selections), the standard's minimum is
+  multiplied, and the increase for protein is then added, measured from the
+  raised protein minimum. Under NRC RA Dog Maintenance, with 40 g/Mcal of
+  protein entered under Min, the minimum is 1.03 g/Mcal with no restriction
+  and 1.24 at 25%, not 1.03 × 4/3.
 - The template describes the restriction itself with the same band test, on a
   range of 0 to 55, or as "No restriction to describe" for 0, nothing entered
   or "none". That row describes an input, not a nutrient.
 - The template's notes recommend stating the restriction wherever a band is
   cited, because the same g/Mcal can then fall in a different band.
+
+The MBW rows come from separate requirements, per kg of metabolic body weight.
+The template's notes present the percentage as an alternative to them. The
+percentage does not change them. They are converted with the daily energy the
+template uses: the calculated requirement, which the percentage does not
+reduce, or an intake entered in its place.
+Converted with an entered intake, an MBW row's minimum supplies the standard's
+daily amount at that intake.
+
+An intake entered in place of the calculated requirement (cell K4, labelled
+"Overwrite & Use This Instead (kcal/day):") is not a restriction. Only a number
+above 0 in K4 counts as an entered intake, here and throughout this page;
+anything else leaves the calculated requirement in use. An entered intake is the
+daily energy that the template uses for the animal. It never triggers a
+restriction adjustment, because individual energy needs vary widely around the
+calculated average. The template's notes cite individual variation of up to 55%
+(the basis of its 55% cap), and about 50% for cats from the 2006 NRC. So an
+intake below the calculated requirement may meet the animal's whole need, or
+only part of it. Whether it is a restriction is for the user to say, by entering
+the percentage. For example, 1000 kcal/day entered where the calculated
+requirement is 1250 is not, by itself, a restriction. Entering 20 as the
+percentage as well says that 1000 kcal/day is 80% of the animal's need.
+
+- An entered intake changes limits and bands only on the rows that the
+  template converts with daily energy: the energy row (its minimum becomes the
+  intake), the MBW rows (the ALA MBW row among them) and the large-breed puppy
+  calcium row. Under the AAFCO and FEDIAF selections, which have no MBW
+  requirements in the template, it changes only the energy row.
+- The template shows how far an entered intake is below the calculated
+  requirement (cell N4, labelled "Note Caloric Restriction:"), and the summary
+  sentences of the energy and MBW rows (column AR) quote it as a "Caloric
+  Restriction Adjustment". Despite those words, the figure is information
+  only: it is not the percentage, which only the user enters, and no limit or
+  band uses it.
 
 #### Limits the template sets or computes
 
@@ -173,7 +235,9 @@ selected standard's value. A limit of none counts as 0 only where the two
 n-6:n-3 ratio rows add or divide limits, and in the ALA rules (the ALA maximum,
 and the test of whether the LA limit is above 0). In the ratio
 rows, AA is arachidonic acid, EPA eicosapentaenoic acid and DHA
-docosahexaenoic acid.
+docosahexaenoic acid; EPA + DHA is a single row for their combined total. The
+ratio limits use the per-Mcal LA, AA, ALA and EPA + DHA rows, not their MBW
+rows.
 
 | Row | Minimum | Maximum |
 |---|---|---|
@@ -190,8 +254,8 @@ docosahexaenoic acid.
 | ALA (g/Mcal; per-Mcal and MBW rows) | under the four NRC dog selections listed below: the larger of the standard's and the LA minimum ÷ 16, or ÷ 26 under NRC RA Dog Maintenance; otherwise standard | under the same four: the larger of the standard's and the LA maximum ÷ 2.6; otherwise standard |
 | Ca:P | standard | standard, else calcium maximum ÷ phosphorus minimum when both exist and the phosphorus minimum is above 0, else none |
 | LA + AA : ALA + EPA + DHA | standard, else (LA + AA minimums) ÷ (ALA + EPA + DHA maximums); none when that divisor is 0 | standard, else (LA + AA maximums) ÷ (ALA + EPA + DHA minimums); 50 when either sum is 0 |
-| LA + AA : EPA + DHA | standard, else (LA + AA minimums) ÷ EPA + DHA maximum; none when that is 0 | standard, else (LA + AA maximums) ÷ EPA + DHA minimum; 125 when either is 0 |
-| Calcium for puppies 4 to 14 weeks old with an adult body weight over 25 kg (g/Mcal) | NRC RA Puppy 4-14 Wk Growth only: the larger of 3 and (0.54 × the body weight entered for this row, in kg) ÷ (daily energy in kcal ÷ 1,000), or 3 when no body weight above 0 is entered; then multiplied by 1 ÷ (1 − restriction ÷ 100) when a restriction is entered; otherwise none | none when the minimum is none; otherwise 4.5, or 1.1 times the minimum when the minimum is above 4.5 |
+| LA + AA : EPA + DHA | standard, else (LA + AA minimums) ÷ (EPA + DHA maximum); none when that maximum is 0 | standard, else (LA + AA maximums) ÷ (EPA + DHA minimum); 125 when either is 0 |
+| Calcium for puppies 4 to 14 weeks old with an adult body weight over 25 kg (g/Mcal) | NRC RA Puppy 4-14 Wk Growth only (otherwise none): the larger of 3 and the body-weight term, (0.54 × the body weight entered for this row, in kg) ÷ (daily energy in kcal ÷ 1,000), or 3 when no body weight above 0 is entered. When a restriction is entered, 3 is first multiplied by 1 ÷ (1 − restriction ÷ 100), and so is the body-weight term unless an intake above 0 is entered; the larger is then taken | none when the minimum is none; otherwise 4.5, or 1.1 times the minimum when the minimum is above 4.5 |
 | Vitamin D2 (cats only; per-Mcal and MBW rows) | the vitamin D minimum ÷ 0.7, or none when that is none | the vitamin D maximum, or none when that is none |
 {:.grid}
 
@@ -254,8 +318,10 @@ it. If it never is, the value is in `range-d10`. So:
   as the labels' "to <" wording says.
 - The first band takes every value below 25% of the minimum, negative values
   included (a carbohydrate by difference can be negative).
-- The top band takes every value at or above its lower edge, including every
-  value above the range high.
+- Unless the row's maximum is below its minimum (see
+  [A maximum below the minimum](#a-maximum-below-the-minimum)), the top band
+  takes every value at or above its lower edge, including every value above
+  the range high.
 - Where two edges are equal, the band between them is empty. On a row with no
   minimum, the 25 to 50, 50 to 75 and 75 to 100% bands are empty: a value of
   0 or more goes straight to the deciles, and only a negative value is below
@@ -387,25 +453,59 @@ Nutrient Decile Bands has no code for any outcome other than a band (see
 The template gives bands only. The per-nutrient interpretation is set by this
 guide's
 [Animal Nutrient Adequacy Assessment](StructureDefinition-animal-nutrient-adequacy.html)
-profile, using the [Adequacy Interpretation](CodeSystem-adequacy-interpretation.html)
-and [Maximum Provenance Codes](CodeSystem-maximum-provenance-code.html) code
+profile, using the
+[Adequacy Interpretation](CodeSystem-adequacy-interpretation.html) and
+[Maximum Provenance Codes](CodeSystem-maximum-provenance-code.html) code
 systems.
 
 | Diet value | Band | Interpretation |
 |---|---|---|
-| Below a minimum set by the applied standard | `below-min-lt25` to `below-min-75-100` | [`deficient`](CodeSystem-adequacy-interpretation.html#adequacy-interpretation-deficient) |
+| Below a minimum set by the applied standard, including one raised for a caloric restriction, and the arginine and large-breed puppy calcium minimums (below) | `below-min-lt25` to `below-min-75-100` | [`deficient`](CodeSystem-adequacy-interpretation.html#adequacy-interpretation-deficient) |
 | At or above the minimum, up to the range high | `range-d1` to `range-d10` | [`adequate`](CodeSystem-adequacy-interpretation.html#adequacy-interpretation-adequate) |
 | Above a derived-provisional ceiling: the range high is the minimum times K, and maxProvenance is `derived-provisional` | `range-d10` | `adequate` |
-| Above a maximum or safe upper limit set by the applied standard: maxProvenance is `authoritative` | `range-d10` | [`excess`](CodeSystem-adequacy-interpretation.html#adequacy-interpretation-excess) |
+| Above a maximum or safe upper limit set by the applied standard, and not below a minimum set by the applied standard, including one raised for a caloric restriction: maxProvenance is `authoritative` | `range-d10` | [`excess`](CodeSystem-adequacy-interpretation.html#adequacy-interpretation-excess) |
+| Below a minimum raised for a caloric restriction, and above a maximum or safe upper limit set by the applied standard | `below-min-lt25` to `below-min-75-100` | `deficient` |
 {:.grid}
 
-- Some minimums are not the applied standard's own (see
-  [Limits the template sets or computes](#limits-the-template-sets-or-computes)
-  and [Caloric restriction](#caloric-restriction)). Whether a value below one
-  of them is `deficient` is open (see [Open points](#open-points), item 6).
-- There is no 15th band for values above the range high. There the band is
-  `range-d10`, whoever set the ceiling, so `range-d10` alone does not say
-  whether a value is above it. referenceRange.high holds the ceiling, and
+The table pairs bands with interpretations away from rounding boundaries. At a
+boundary the two can differ: bands compare at 7 decimal places, and whether the
+interpretation tests do is open (see [Open points](#open-points), item 7).
+
+- **Caloric restriction.** Where the template raises a standard's minimum for a
+  caloric restriction, referenceRange.low holds the raised minimum, and the
+  band is computed from it, as in the template. So the value, the range and
+  the band agree. A value below the raised minimum is `deficient`, even if it
+  meets the minimum that applies with no restriction. Whether this test
+  compares at 7 decimal places is open (see [Open points](#open-points),
+  item 7).
+- **A raised minimum above a maximum.** From a restriction of about 30%, a
+  raised minimum can exceed a maximum set by the applied standard (see
+  [A maximum below the minimum](#a-maximum-below-the-minimum)). A value below
+  the raised minimum and above that maximum is `deficient`, and its band is
+  below the minimum. The excess stays visible: the value is above
+  referenceRange.high, and maxProvenance is `authoritative` (for which
+  maximums count, see [Open points](#open-points), item 4).
+- **Arginine and large-breed puppy calcium.** The template computes these
+  minimums from a standard's own rule: arginine's increase for protein (NRC and
+  FEDIAF selections) and, for the puppy row, footnote h to Table 15-3 of the
+  2006 NRC (at least 0.54 g of calcium per kg of body weight a day). These two
+  count as the applied standard's, with or without a restriction; the other
+  computed minimums stay open (below). referenceRange.low holds them, and a
+  value below one of them is `deficient`.
+- **Recording the restriction.** A verdict checked under a caloric restriction
+  above 0 records the percentage in the
+  [Caloric Restriction](StructureDefinition-caloric-restriction.html)
+  extension. An entered intake is not a restriction and is not recorded there
+  (see [Open points](#open-points), item 12).
+- **What these rules do not reach.** An ALA value that falls short only
+  because of the restriction can be `adequate` (see
+  [Open points](#open-points), item 20). Whether a value below the other
+  minimums that the template supplies or computes is `deficient` is open (see
+  [Open points](#open-points), item 6).
+- There is no 15th band for values above the range high. A value there that is
+  not below the minimum is in `range-d10`, whoever set the ceiling, so
+  `range-d10` alone does not say whether a value is above it.
+  referenceRange.high holds the ceiling, and
   [maxProvenance](StructureDefinition-maximum-provenance.html) says whether the
   applied standard set it.
 - maxProvenance is
@@ -439,6 +539,29 @@ The value 3.4 lies exactly on the 80% edge from the rounding example above. The
 template computes that edge as 3.4000000000000004. At 7 decimal places it is
 3.4, so the value is in `range-d9`, the band that starts there.
 
+With a 25% caloric restriction entered, the minimum becomes 1 × 4/3 =
+1.3333333 g/Mcal at 7 decimal places, and the range high, still a
+derived-provisional ceiling, becomes 4 times that, 5.3333333 g/Mcal. The lower
+edges are 0.3333333, 0.6666667 and 1 below the minimum, then 1.3333333 for
+`range-d1`, rising by 0.4 to 4.9333333 for `range-d10`.
+
+| Diet value (g/Mcal) | Band | Interpretation |
+|---|---|---|
+| 0.9 | `below-min-50-75` | `deficient` |
+| 1 | `below-min-75-100` | `deficient` |
+| 1.2 | `below-min-75-100` | `deficient` |
+| 1.34 | `range-d1` | `adequate` |
+| 4 | `range-d7` | `adequate` |
+{:.grid}
+
+The values 1 and 1.2 meet NRC's minimum, and with no restriction they are in
+`range-d1`. At the restricted intake they supply 75% and 90% of the calcium
+that 1 g/Mcal supplies each day at the animal's full energy need, so they are
+`deficient`. The verdict records 25% in caloricRestriction, and calcium's
+referenceRange.low holds the raised minimum, as in this guide's example
+[Adult-maintenance adequacy under a 25% caloric restriction, canine, vs NRC](Observation-ExampleRestrictedMaintenanceAdequacy.html)
+for the value 1.2.
+
 This guide's example
 [Adult-maintenance adequacy, canine, vs AAFCO](Observation-ExampleAdultMaintenanceAdequacy.html)
 follows the same computation under AAFCO Dog Maintenance. Calcium at 2.0 g/Mcal,
@@ -449,8 +572,9 @@ minimum of 1.5 and a derived-provisional ceiling of 6.0 (4 × 1.5), is in
 
 ### Open points
 
-The template does not settle the points below. This page lists them and does
-not decide them.
+The template does not settle the points below. This page decides none of them
+in full: where one of its rules settles part of a point, the item points to
+that rule and lists what is still open.
 
 1. **Recording "No range" and the other outcomes.** Nutrient Decile Bands has
    no code for "No range", the no-minimum text, a blank, "none" or an error
@@ -495,25 +619,29 @@ not decide them.
    decile edge by up to 0.0000000009 (times the conversion factor on an MBW
    row), so it can still move a rounded edge by 0.0000001 (a difference that is
    clinically insignificant and far beyond any measurable precision) when an
-   edge lies that close to a rounding boundary, as caloric restriction or a large
-   conversion factor can make it do; the notes' statement is a practical one.
-6. **Minimums the template supplies, computes or adjusts.** The template
-   supplies minimums where the selected standard gives none (vitamin C,
-   carbohydrate, the fibers, oxalate, purine, energy density), computes others
-   (the ALA floor from LA, the arginine increase for protein, the large-breed
-   puppy calcium row, vitamin D2, the two n-6:n-3 ratio rows) and raises others
-   for caloric restriction. Its notes say that none of the supplied minimums is
-   a requirement of the standards, and the oxalate and purine minimums come
-   from human upper intake recommendations. The profile describes
-   referenceRange.low as the requirement minimum (authoritative), and this
-   guide has no provenance flag for minimums. Whether a value below such a
-   minimum is `deficient`, and whether such a minimum goes in
-   referenceRange.low, is not stated.
+   edge lies that close to a rounding boundary, as caloric restriction or a
+   large conversion factor can make it do; the notes' statement is a practical
+   one.
+6. **Minimums the template supplies or computes.** The template supplies
+   minimums where the selected standard gives none (vitamin C, carbohydrate,
+   the fibers, oxalate, purine, energy density) and computes others (the
+   energy minimum, the ALA floor from LA, vitamin D2, the two n-6:n-3 ratio
+   rows). Its notes say that none of the supplied minimums is a requirement of
+   the standards, and the oxalate and purine minimums come from human upper
+   intake recommendations. The profile describes referenceRange.low as the
+   requirement minimum, and this guide has no provenance flag for minimums.
+   Whether a value below such a minimum is `deficient`, with or without a
+   restriction, and whether such a minimum goes in referenceRange.low, is not
+   stated. Raised standard minimums, arginine and the large-breed puppy
+   calcium row are covered by the rules under
+   [Bands and the adequacy interpretation](#bands-and-the-adequacy-interpretation).
 7. **Precision of `deficient` and `excess`.** The template's descriptions have
    no test for "above the maximum"; its colouring compares the value with the
    range high at 7 decimal places (above it, only the range-high cell is
    coloured). Whether this guide's "below the minimum" and "above the maximum"
-   tests use 7 decimal places is not stated.
+   tests use 7 decimal places is not stated. It matters for many raised
+   minimums: at 25%, calcium at 1.3333333 g/Mcal under NRC RA Dog Maintenance
+   is in `range-d1`, but below the exact minimum, 4/3.
 8. **Rounding and arithmetic.** The template rounds with its spreadsheet's
    rounding function and does not state the tie rule, or whether the stored
    binary value or its decimal form is rounded. This matters only for a value
@@ -530,24 +658,37 @@ not decide them.
 10. **Invariants and validation.** Nothing checks that the minimum is below the
     range high, that values and limits are not negative, that the daily energy
     is above 0, or that K is above 0. When a maximum falls below the minimum, a
-    value between the two is both below the minimum and above the maximum, and
-    no rule says which interpretation applies. Whether any rule on this page
-    becomes a validator-checked invariant or stays in narrative is not decided.
+    value between the two is both below the minimum and above the maximum.
+    Where a caloric restriction raises a standard's minimum above its maximum,
+    such a value is `deficient` (see
+    [Bands and the adequacy interpretation](#bands-and-the-adequacy-interpretation));
+    in other cases, such as carbohydrate, no rule says which interpretation
+    applies. Whether any rule on this page becomes a validator-checked
+    invariant or stays in narrative is not decided.
 11. **Several reference ranges for one nutrient.** The template bands each row
     on its own: per-Mcal and MBW rows; general rows and rows for foods of more
     than 12% moisture (taurine, copper, selenium); calcium and the
     large-breed puppy calcium row; vitamin D and vitamin D2, whose combined
     total the template says it does not compute; retinol for cats and vitamin A
-    for dogs. Which row decides a verdict is not stated, nor which range
-    maxProvenance describes when a component carries more than one
-    referenceRange (FHIR reads several reference ranges as alternatives).
+    for dogs. Two cases follow from the rules under
+    [Bands and the adequacy interpretation](#bands-and-the-adequacy-interpretation):
+    a value below a standard's minimum raised for a caloric restriction is
+    `deficient` even if it meets the nutrient's MBW row, which the restriction
+    does not raise, and a value below the large-breed puppy calcium minimum is
+    `deficient` even if it meets the general calcium row. Otherwise, which row
+    decides a verdict is not stated, nor whether a component may carry more
+    than one referenceRange, or which range maxProvenance then describes: FHIR
+    reads several reference ranges as alternatives, so in the two cases above a
+    second range from the MBW or general calcium row would read as met.
 12. **Inputs a verdict needs.** The limits depend on the selection, the caloric
-    restriction, body weight, the type of dog or cat or an entered energy
-    intake, the expected mature body weight, lactation inputs, the puppy body
-    weight for the large-breed calcium row, and the protein entered under Min
-    (for arginine). The profile records the standard and the life stage, but
-    none of these inputs. The template defines no fallback while a required
-    input is missing.
+    restriction, body weight, the type of dog or cat or an intake entered in
+    place of the calculated requirement, the expected mature body weight,
+    lactation inputs, the puppy body weight for the large-breed calcium row,
+    and the protein entered under Min (for arginine). The profile records the
+    standard, the life stage and the caloric restriction, as a percentage (see
+    [Bands and the adequacy interpretation](#bands-and-the-adequacy-interpretation)),
+    but none of the other inputs, including an entered intake. The template
+    defines no fallback while a required input is missing.
 13. **Selections and editions.** The 21 selections do not map one to one onto
     this guide's [Requirement Standards](CodeSystem-requirement-standard.html)
     and [Life Stages](CodeSystem-life-stage.html) codes: for example FEDIAF
@@ -581,9 +722,20 @@ not decide them.
 19. **Overall verdict.** The profile's top-level interpretation is the overall
     complete-and-balanced verdict. How it follows from the per-nutrient
     results, and from the outcomes in item 1, is not stated.
-20. **ALA under caloric restriction.** The template does not adjust the ALA
-    minimum itself for caloric restriction, and its notes on both ALA rows flag
-    this as a limitation. Whether a checker should adjust it is not stated.
+20. **ALA under caloric restriction.** The caloric restriction percentage does
+    not raise ALA's own per-Mcal minimum (see
+    [Caloric restriction](#caloric-restriction)). So an ALA value that falls
+    short only because of the restriction can be `adequate`. Fourteen
+    selections have an ALA minimum. Under the ten that are not NRC dog
+    selections, all for growth or reproduction, the per-Mcal ALA minimum does
+    not rise at all. Under NRC RA Dog Maintenance, the template's minimum stays
+    up to 2.1% below ALA's own minimum (0.11 g/Mcal) times the restriction
+    factor: 0.1435897 against 0.1466667 g/Mcal at 25%, where the minimum is the
+    floor from LA. Under the other three NRC dog selections, the floor from LA
+    stays above ALA's own minimum times the factor, so no such shortfall
+    arises. Under the four NRC dog selections, whether a value below the floor
+    is `deficient` is item 6. How ALA's own minimum is to be raised is left to
+    the template's next version.
 
 ### Earlier versions
 
@@ -594,6 +746,12 @@ maximum and the large-breed puppy calcium minimum; it also added the vitamin D2
 rows. Earlier versions, including 28SEP25 and 16OCT26, differ in these and
 other respects. The template's History of Change(s) tab lists the changes made
 in each version.
+
+Version 18OCT26 was corrected the same day, with its label unchanged (History
+of Change(s), row 10). The correction changes only the large-breed puppy
+calcium row (its minimum, and the maximum that follows it), and only when a
+puppy body weight, an intake and a restriction are all entered. This page
+follows the corrected version.
 
 ### Where each rule is in the template
 
@@ -610,7 +768,7 @@ For reviewers checking this page against the template's Standards tab:
 | Their descriptions | columns L and N |
 | The band rules and the rounding, in the template's words | the note on cell L5 |
 | Multipliers other than 4 | the Exceptions to Range High = 4X Min tab |
-| Daily energy (the energy minimum and the MBW conversion) | the Healthy Dog Cat Reqt Data tab, row 4: one formula per selection, using the inputs in rows 3 and 4 of the Standards tab; an intake above 0 entered in cell K4 overrides it |
+| Daily energy (the energy minimum, the MBW conversion and the large-breed puppy calcium row) | the Healthy Dog Cat Reqt Data tab, row 4: one formula per selection, using the inputs in rows 3 and 4 of the Standards tab; an intake above 0 entered in cell K4 overrides it |
 | Requirement values for the 21 selections | the Healthy Dog Cat Reqt Data tab |
 | Changes in each version | the History of Change(s) tab |
 {:.grid}

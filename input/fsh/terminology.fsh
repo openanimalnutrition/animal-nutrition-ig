@@ -64,12 +64,12 @@ Description: "All codes in the Maximum Provenance Codes code system."
 CodeSystem: AdequacyInterpretationCS
 Id: adequacy-interpretation
 Title: "Adequacy Interpretation"
-Description: "Per-nutrient and overall interpretations of a diet's nutrient levels against the applied requirement standard."
+Description: "Per-nutrient and overall interpretations of a diet's nutrient levels against the applied requirement standard. The rules for `deficient` and `excess` are stated, proposed and pending ratification, on the [Decile Basis and Band Computation](band-computation.html) page."
 * ^caseSensitive = true
 * ^experimental = false
 * #adequate "Meets the requirement"
 * #deficient "Below the minimum"
-* #excess "Above the standard's maximum" "Above a maximum or safe upper limit set by the applied standard. Not used for derived-provisional ceilings."
+* #excess "Above the standard's maximum" "Above a maximum or safe upper limit set by the applied standard, and not below a minimum set by the applied standard, including one raised for a caloric restriction. Not used for derived-provisional ceilings. Proposed, pending ratification."
 * #complete-balanced "Overall: complete and balanced"
 * #not-complete-balanced "Overall: not complete and balanced"
 
@@ -83,7 +83,7 @@ Description: "All codes in the Adequacy Interpretation code system."
 CodeSystem: NutrientDecileCS
 Id: nutrient-decile
 Title: "Nutrient Decile Bands"
-Description: "The 14 bands of the Dynamic Decile System: four bands below the requirement minimum, as a share of the minimum, and ten deciles from the minimum to the range high. A value above the range high is reported as range-d10. The computation is stated, proposed and pending ratification, on the [Decile Basis and Band Computation](band-computation.html) page."
+Description: "The 14 bands of the Dynamic Decile System: four bands below the requirement minimum, as a share of the minimum, and ten deciles from the minimum to the range high. Where an entry gets a band, a value above the range high is in range-d10 unless it is below the minimum. The computation is stated, proposed and pending ratification, on the [Decile Basis and Band Computation](band-computation.html) page."
 * ^caseSensitive = true
 * ^experimental = false
 * #below-min-lt25 "Very Severely Restricted (<25% of Min)"

@@ -37,9 +37,11 @@ sushi-config.yaml
 input/
   fsh/
     profiles.fsh        # AnimalNutrientAdequacy (Observation profile)
-    extensions.fsh      # appliedStandard, lifeStage, maxProvenance, decile
+    extensions.fsh      # appliedStandard, lifeStage, caloricRestriction,
+                        # maxProvenance, decile
     terminology.fsh     # CodeSystems + ValueSets (stubs)
-    examples.fsh        # canine adult-maintenance example
+    examples.fsh        # canine adult-maintenance examples (AAFCO; NRC under
+                        # a 25% caloric restriction)
   pagecontent/
     index.md
     band-computation.md # band computation (proposed, pending ratification)
