@@ -1,10 +1,10 @@
-**Proposed, pending ratification.** This page states the computation that the
-provisional steward proposes for the two decisions that
+**Proposed, pending ratification.** This page states the computation and the
+rules that the provisional steward proposes for the three decisions that
 [GOVERNANCE.md](https://github.com/openanimalnutrition/animal-nutrition-ig/blob/main/GOVERNANCE.md)
 reserves for ratification: the common mathematical basis for expressing
-nutrient levels (the decile basis), and the derived-provisional maximum rule.
-It also states the limits that the source template sets or computes, which the
-computation uses.
+nutrient levels (the decile basis), the derived-provisional maximum rule, and
+the adequacy interpretation rules. It also states the limits that the source
+template sets or computes, which the computation uses.
 
 - **Why it is published now:** so that implementers have one written
   computation to reproduce, instead of each working it out from the template.
@@ -599,7 +599,9 @@ that rule and lists what is still open.
    set by the applied standard and one computed from the minimum.
    - maximums the template sets (water, energy density, medium-chain
      triglycerides, taurine) or computes from other limits (carbohydrate, the
-     ratios, ALA, the large-breed puppy calcium row, vitamin D2);
+     ratios, ALA, vitamin D2), and the large-breed puppy calcium row's maximum:
+     4.5 g/Mcal (the 2006 NRC safe upper limit for calcium) or, when the row's
+     own minimum is above 4.5, 1.1 times that minimum;
    - requirement values that are its own estimates (for example the sodium
      maximums per kg of metabolic body weight that the template derives from
      NRC's greater-than limits);

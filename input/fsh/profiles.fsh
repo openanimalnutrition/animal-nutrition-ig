@@ -81,7 +81,7 @@ and rounding (i.e. how a passing diet is produced) are out of scope by design.
 * component.interpretation from AdequacyInterpretationVS (required)
 * component.referenceRange MS
 * component.referenceRange.low ^short = "Requirement minimum"
-* component.referenceRange.high ^short = "Maximum (authoritative OR derived-provisional)"
+* component.referenceRange.high ^short = "Maximum or ceiling (see maxProvenance)"
 * component.extension contains
     MaximumProvenance named maxProvenance 0..1 MS and
     NutrientDecile named decile 0..1 MS

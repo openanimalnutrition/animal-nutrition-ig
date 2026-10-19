@@ -35,7 +35,7 @@ Instance: ExampleAdultMaintenanceAdequacy
 InstanceOf: AnimalNutrientAdequacy
 Usage: #example
 Title: "Adult-maintenance adequacy, canine, vs AAFCO"
-Description: "Adequacy of a canine adult-maintenance diet against AAFCO, with one nutrient under an authoritative maximum (calcium) and one under a derived-provisional ceiling (potassium)."
+Description: "Adequacy of a canine adult-maintenance diet against AAFCO, with one nutrient under an authoritative maximum (calcium) and one under a derived-provisional ceiling (potassium). The overall verdict shown is illustrative: how it follows from the per-nutrient results is an open point on the [Decile Basis and Band Computation](band-computation.html) page."
 * status = #final
 * extension[appliedStandard].valueCodeableConcept = RequirementStandardCS#AAFCO
 * extension[lifeStage].valueCodeableConcept = LifeStageCS#adult-maintenance

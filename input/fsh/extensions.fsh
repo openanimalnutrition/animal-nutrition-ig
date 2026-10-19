@@ -48,13 +48,14 @@ Id: maximum-provenance
 Title: "Maximum Provenance"
 Description: """
 Whether a nutrient's maximum is AUTHORITATIVE (set by the applied standard) or
-DERIVED-PROVISIONAL (computed by a disclosed rule from the minimum, where no
-authoritative limit exists).
+DERIVED-PROVISIONAL (computed by a disclosed rule from the minimum). Which code
+fits a maximum that the source template sets or computes is an open point on the
+[Decile Basis and Band Computation](band-computation.html) page.
 
 Derived ceilings prioritize consistency and determinism, NOT toxicological
 calibration, and are revisable by the governance body. This flag exists so a
-consumer can see at a glance which ceilings are authoritative and which are the
-standard's own provisional call.
+consumer can see at a glance which ceilings are authoritative and which are
+this guide's own provisional call.
 """
 Context: Observation.component
 * value[x] only code
@@ -63,7 +64,7 @@ Context: Observation.component
 Extension: NutrientDecile
 Id: nutrient-decile
 Title: "Nutrient Decile (Common-Basis Expression)"
-Description: "The diet's level for this nutrient on the common mathematical basis used to compare across standards, expressed as a band of the Dynamic Decile System: four bands below the minimum and ten deciles from the minimum to the range high. Where an entry gets a band, a value above the range high is in range-d10 (Highest) unless it is below the minimum. The decile basis and band computation, the single decision that carries the standard's neutrality, are stated on the [Decile Basis and Band Computation](band-computation.html) page, proposed and pending ratification by the governance body."
+Description: "The diet's level for this nutrient on the common mathematical basis used to compare across standards, expressed as a band of the Dynamic Decile System: four bands below the minimum and ten deciles from the minimum to the range high. Where an entry gets a band, a value above the range high is in range-d10 (Highest) unless it is below the minimum. The decile basis and band computation are stated on the [Decile Basis and Band Computation](band-computation.html) page, proposed and pending ratification by the governance body."
 Context: Observation.component
 * value[x] only code
 * valueCode from NutrientDecileVS (required)
