@@ -8,8 +8,9 @@ against NRC / AAFCO / FEDIAF on a common basis. This guide models the
 This skeleton was hand-authored. It now compiles with SUSHI and builds with the
 IG Publisher, but its content has not been validated. `TODO` markers flag what
 remains open (component slicing, and nutrient and species bindings). The decile
-basis and band computation are stated, proposed and pending ratification, in
-`input/pagecontent/band-computation.md`; issue #4 tracks ratification.
+basis, the band computation and the adequacy interpretation rules are stated,
+proposed and pending ratification, in `input/pagecontent/band-computation.md`;
+issue #4 tracks ratification.
 
 ## Locked configuration
 - canonical: `https://openanimalnutrition.org/fhir/animal-nutrition`

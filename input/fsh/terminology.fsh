@@ -48,7 +48,7 @@ Description: "All codes in the Life Stages code system."
 CodeSystem: MaximumProvenanceCS
 Id: maximum-provenance-code
 Title: "Maximum Provenance Codes"
-Description: "Whether a nutrient's maximum is set by the applied standard or derived from the minimum by a disclosed rule."
+Description: "Whether a nutrient's maximum is set by the applied standard or derived from the minimum by a disclosed rule. Which code fits a maximum that the source template sets or computes is an open point on the [Decile Basis and Band Computation](band-computation.html) page."
 * ^caseSensitive = true
 * ^experimental = false
 * #authoritative "Authoritative (set by the applied standard)"
