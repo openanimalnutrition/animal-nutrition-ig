@@ -3,7 +3,7 @@
 Extension: AppliedRequirementStandard
 Id: applied-requirement-standard
 Title: "Applied Requirement Standard"
-Description: "Which published requirement standard the adequacy check was run against. A variable selection, never hardcoded into the check."
+Description: "Which published requirement standard the adequacy check was run against, by its edition's code when the edition is known (for example AAFCO-2026). A variable selection, never hardcoded into the check."
 Context: Observation
 * value[x] only CodeableConcept
 * valueCodeableConcept from RequirementStandardVS (required)
@@ -23,10 +23,12 @@ Description: """
 The intentional caloric restriction that the check was run under, as a
 percentage of the animal's energy need, in UCUM `%`: 25 means that the animal
 is fed 25% less energy than it needs. Most of the applied standard's per-Mcal
-minimums are then multiplied by 1 ÷ (1 − restriction ÷ 100), so a nutrient can
-be `deficient` although it meets the minimum that applies with no restriction.
-The source template accepts 0 to 55. Present only for a restriction above 0,
-and absent when none was entered (blank or 0 in the template). An intake
+minimums are then multiplied by 1 ÷ (1 − restriction ÷ 100) (under an AAFCO
+selection, together with any AAFCO dry matter factor), so a nutrient can be
+`deficient` although it meets the minimum that applies with no restriction.
+The source template accepts 0 (none) or a number from 1 to 55. Present only
+for a restriction above 0, and absent when none was entered (blank or 0 in the
+template). An intake
 entered in place of the calculated energy requirement is not a restriction.
 Neither it nor the template's figure for how far it falls below that
 requirement (cell N4 on the template's Standards tab) is recorded here. Which
@@ -47,15 +49,18 @@ Extension: MaximumProvenance
 Id: maximum-provenance
 Title: "Maximum Provenance"
 Description: """
-Whether a nutrient's maximum is AUTHORITATIVE (set by the applied standard) or
-DERIVED-PROVISIONAL (computed by a disclosed rule from the minimum). Which code
-fits a maximum that the source template sets or computes is an open point on the
-[Decile Basis and Band Computation](band-computation.html) page.
+The kind of maximum a nutrient's range high is: AUTHORITATIVE (set by a standards body for the animal and the use it is applied
+to), CONDITIONAL (a standard's figure with a condition the check
+does not verify), TEMPLATE-SET (set or computed by the source template) or
+DERIVED-PROVISIONAL (computed by a disclosed rule from the minimum). Only a
+value above an authoritative maximum is `excess`. How the source template's
+maximum types map to these codes is stated, proposed and pending ratification,
+on the [Decile Basis and Band Computation](band-computation.html) page.
 
 Derived ceilings prioritize consistency and determinism, NOT toxicological
 calibration, and are revisable by the governance body. This flag exists so a
 consumer can see at a glance which ceilings are authoritative and which are
-this guide's own provisional call.
+not.
 """
 Context: Observation.component
 * value[x] only code

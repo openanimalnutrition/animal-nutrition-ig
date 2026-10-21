@@ -23,19 +23,22 @@ Ratio nutrients such as Ca:P are components like any other nutrient, with a
 unitless quantity (UCUM `1`). Non-linear ratio nutrients are excluded from the
 component model by design.
 
-A component's interpretation is `excess` only when the value is above a maximum
-or safe upper limit set by the applied standard (maxProvenance `authoritative`)
-and not below a minimum set by the applied standard, including one raised for a
-caloric restriction (below). Above a derived-provisional ceiling the
-interpretation stays `adequate`. The band is then `range-d10` ("Highest (90% of
-Range or Greater)"), which alone does not show that the ceiling was exceeded:
-referenceRange.high holds the derived ceiling, and maxProvenance says it is
-`derived-provisional`.
+A component's interpretation is `excess` only when the value is above an
+authoritative maximum, one set by a standards body for the animal and the use
+it is applied to (maxProvenance
+`authoritative`), and not below a minimum set by the applied standard,
+including one raised for a caloric restriction or by the AAFCO dry matter
+factor (below). Above a conditional, template-set or derived-provisional
+maximum, and not below the minimum, the interpretation stays `adequate`. The
+band is then `range-d10` ("Highest (90% of Range or
+Greater)"), which alone does not show that the maximum was exceeded:
+referenceRange.high holds the maximum, and maxProvenance says what kind it is.
 
-Where a caloric restriction raises a minimum set by the applied standard,
-referenceRange.low holds the raised minimum, and the band is computed from it. A
-value below it is `deficient`, even if it meets the minimum that applies with no
-restriction. A verdict checked under a caloric restriction above 0 records the
+Where a caloric restriction, or the AAFCO dry matter factor for a food below
+4 kcal/g of dry matter, raises a minimum set by the applied standard,
+referenceRange.low holds the raised minimum, and the band is computed from it.
+A value below it is `deficient`, even if it meets the minimum that applies
+with no adjustment. A verdict checked under a caloric restriction above 0 records the
 percentage in `caloricRestriction`. This rule, the condition on `excess` above,
 and which minimums they cover are stated, proposed and pending ratification, on
 the [Decile Basis and Band Computation](band-computation.html) page.

@@ -10,7 +10,15 @@ IG Publisher, but its content has not been validated. `TODO` markers flag what
 remains open (component slicing, and nutrient and species bindings). The decile
 basis, the band computation and the adequacy interpretation rules are stated,
 proposed and pending ratification, in `input/pagecontent/band-computation.md`;
-issue #4 tracks ratification.
+issue #4 tracks ratification. That page follows the source template's Version 21OCT26b, an error-fix
+version of 21OCT26, its final feature version (frozen except for error
+fixes); the
+template's status and known limitations are in
+`input/pagecontent/known-limitations.md`.
+
+The project's address is https://github.com/openanimalnutrition for now;
+openanimalnutrition.org, the domain of the canonical URL below, is the planned
+future address.
 
 ## Locked configuration
 - canonical: `https://openanimalnutrition.org/fhir/animal-nutrition`
@@ -46,6 +54,8 @@ input/
   pagecontent/
     index.md
     band-computation.md # band computation (proposed, pending ratification)
+    known-limitations.md # the source template's status, known limitations
+                         # and errata
 GOVERNANCE.md
 ```
 
