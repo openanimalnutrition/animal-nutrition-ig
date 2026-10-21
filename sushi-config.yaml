@@ -37,8 +37,11 @@ pages:
     title: Open Animal Nutrition
   band-computation.md:
     title: "Decile Basis and Band Computation (proposed, pending ratification)"
+  known-limitations.md:
+    title: "Template Status and Known Limitations"
 
 menu:
   Home: index.html
   "Band Computation (proposed)": band-computation.html
+  "Template Status": known-limitations.html
   Artifacts: artifacts.html

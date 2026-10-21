@@ -1,6 +1,7 @@
 // Open Animal Nutrition — Examples (v0.1 SCAFFOLD, UNVALIDATED)
-// Values below are per 1,000 kcal ME: AAFCO Dog Maintenance, then NRC RA Dog
-// Maintenance under a 25% caloric restriction.
+// Values below are per 1,000 kcal ME: AAFCO Dog Maintenance (2026 AAFCO), then
+// NRC RA Dog Maintenance (2006 NRC) under a 25% caloric restriction, as in the
+// source template, Version 21OCT26b.
 
 Instance: ExampleCaninePatient
 InstanceOf: Patient
@@ -37,7 +38,7 @@ Usage: #example
 Title: "Adult-maintenance adequacy, canine, vs AAFCO"
 Description: "Adequacy of a canine adult-maintenance diet against AAFCO, with one nutrient under an authoritative maximum (calcium) and one under a derived-provisional ceiling (potassium). The overall verdict shown is illustrative: how it follows from the per-nutrient results is an open point on the [Decile Basis and Band Computation](band-computation.html) page."
 * status = #final
-* extension[appliedStandard].valueCodeableConcept = RequirementStandardCS#AAFCO
+* extension[appliedStandard].valueCodeableConcept = RequirementStandardCS#AAFCO-2026
 * extension[lifeStage].valueCodeableConcept = LifeStageCS#adult-maintenance
 * code = OANAssessmentCS#diet-adequacy
 * subject = Reference(ExampleCaninePatient)
@@ -68,7 +69,7 @@ Usage: #example
 Title: "Adult-maintenance adequacy under a 25% caloric restriction, canine, vs NRC"
 Description: "A dog fed 25% less energy than it needs, checked against NRC's recommended allowances for adult dogs at maintenance, under the caloric-restriction rule proposed, pending ratification, on the [Decile Basis and Band Computation](band-computation.html) page. Calcium at 1.2 g/Mcal meets NRC's minimum of 1 g/Mcal, but the restriction raises the minimum to 4/3 g/Mcal (recorded as 1.3333333, at 7 decimal places), so calcium is deficient. The overall verdict shown is illustrative: how it follows from the per-nutrient results is an open point on that page."
 * status = #final
-* extension[appliedStandard].valueCodeableConcept = RequirementStandardCS#NRC
+* extension[appliedStandard].valueCodeableConcept = RequirementStandardCS#NRC-2006
 * extension[lifeStage].valueCodeableConcept = LifeStageCS#adult-maintenance
 * extension[caloricRestriction].valueQuantity = 25 '%'
 * code = OANAssessmentCS#diet-adequacy

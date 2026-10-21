@@ -13,17 +13,21 @@ Description: "Codes for the kind of assessment an Open Animal Nutrition observat
 CodeSystem: RequirementStandardCS
 Id: requirement-standard
 Title: "Requirement Standards"
-Description: "Published nutrient requirement standards an adequacy check can be run against."
+Description: "Published nutrient requirement standards an adequacy check can be run against. Each standards body's code has a child code for each edition (is-a); record the edition's code when the edition is known. The editions are those the source template, Version 21OCT26b, cites."
 * ^caseSensitive = true
 * ^experimental = false
-* #NRC "National Research Council"
-* #AAFCO "Association of American Feed Control Officials"
-* #FEDIAF "European Pet Food Industry Federation"
+* ^hierarchyMeaning = #is-a
+* #NRC "National Research Council" "The nutrient requirements of dogs and cats published by the National Research Council, edition not stated."
+  * #NRC-2006 "NRC 2006" "The 2006 NRC Nutrient Requirements of Dogs and Cats."
+* #AAFCO "Association of American Feed Control Officials" "The dog and cat food nutrient profiles published by the Association of American Feed Control Officials, edition not stated."
+  * #AAFCO-2026 "AAFCO 2026" "The 2026 AAFCO Official Publication (Dog and Cat Food Nutrient Profiles)."
+* #FEDIAF "European Pet Food Industry Federation" "The nutritional guidelines for cats and dogs published by the European Pet Food Industry Federation, edition not stated."
+  * #FEDIAF-2025 "FEDIAF September 2025" "The FEDIAF Nutritional Guidelines, September 2025."
 
 ValueSet: RequirementStandardVS
 Id: requirement-standard-vs
 Title: "Requirement Standards Value Set"
-Description: "All codes in the Requirement Standards code system."
+Description: "All codes in the Requirement Standards code system: the standards bodies and their editions."
 * ^experimental = false
 * include codes from system RequirementStandardCS
 
@@ -48,11 +52,13 @@ Description: "All codes in the Life Stages code system."
 CodeSystem: MaximumProvenanceCS
 Id: maximum-provenance-code
 Title: "Maximum Provenance Codes"
-Description: "Whether a nutrient's maximum is set by the applied standard or derived from the minimum by a disclosed rule. Which code fits a maximum that the source template sets or computes is an open point on the [Decile Basis and Band Computation](band-computation.html) page."
+Description: "The kind of maximum a nutrient's range high is, which decides whether a value above it can be `excess`: only an authoritative maximum can. How the source template's maximum types map to these codes is stated, proposed and pending ratification, under Maximum types on the [Decile Basis and Band Computation](band-computation.html) page."
 * ^caseSensitive = true
 * ^experimental = false
-* #authoritative "Authoritative (set by the applied standard)"
-* #derived-provisional "Derived-provisional (computed from the minimum; revisable)"
+* #authoritative "Authoritative (set by a standards body)" "A maximum or safe upper limit that a standards body sets for the animal and use it is applied to: in the source template, NRC's safe upper limits (as printed, as greater-than values and per kg BW^0.75 or BW^0.67, except those NRC states only for its reference kitten or queen), NRC's presumed safe maximum for choline, AAFCO's maximums (except while the AAFCO dry matter factor applies) and FEDIAF's nutritional maximums (except one used beyond the life stage it is stated for), and a maximum the source template copies from one of these. A value above it, and not below a minimum set by the applied standard, is `excess`."
+* #conditional "Conditional (a standard's figure with a condition the check does not verify)" "A standard's figure that is not a maximum for every diet and animal the check covers: a maximum that applies only under a condition the check does not verify (for example a FEDIAF legal maximum, for nutrients added as additives), a maximum used beyond the life stage or reference animal it is stated for, a level a FEDIAF footnote states to be safe, or an AAFCO maximum while the AAFCO dry matter factor applies. A value above it is not `excess`."
+* #template-set "Template-set (set or computed by the source template)" "A maximum that the source template sets or computes itself: its own estimates, fixed values and maximums calculated from other limits. A value above it is not `excess`."
+* #derived-provisional "Derived-provisional (computed from the minimum; revisable)" "The minimum times a disclosed multiplier, where no maximum is set: a banding device, not a safe limit. A value above it is not `excess`."
 
 ValueSet: MaximumProvenanceVS
 Id: maximum-provenance-vs
@@ -68,8 +74,8 @@ Description: "Per-nutrient and overall interpretations of a diet's nutrient leve
 * ^caseSensitive = true
 * ^experimental = false
 * #adequate "Meets the requirement"
-* #deficient "Below the minimum"
-* #excess "Above the standard's maximum" "Above a maximum or safe upper limit set by the applied standard, and not below a minimum set by the applied standard, including one raised for a caloric restriction. Not used for derived-provisional ceilings. Proposed, pending ratification."
+* #deficient "Below the minimum" "Below a minimum set by the applied standard, including one raised for a caloric restriction or by the AAFCO dry matter factor, and the arginine and large-breed puppy calcium minimums the source template computes from a standard's own rule. Whether a value below a minimum that the source template supplies or computes otherwise is deficient is an open point. Proposed, pending ratification."
+* #excess "Above an authoritative maximum" "Above an authoritative maximum (maxProvenance `authoritative`), and not below a minimum set by the applied standard, including one raised for a caloric restriction or by the AAFCO dry matter factor, as stated on the [Decile Basis and Band Computation](band-computation.html) page. Not used above conditional, template-set or derived-provisional maximums. Proposed, pending ratification."
 * #complete-balanced "Overall: complete and balanced"
 * #not-complete-balanced "Overall: not complete and balanced"
 
