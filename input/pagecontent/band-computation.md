@@ -28,7 +28,7 @@ template sets or computes, which the computation uses.
   disclosure of interest.
 - **The template is frozen:** Version 21OCT26 is its final feature version.
   From now on only errors are corrected, each as a new version with its own
-  label. A code version (Python and Rust) is in development. It becomes the
+  label. A code version (Python) is in development. It becomes the
   reference once it reproduces the template's published test cases; until
   then the template remains the reference. See
   [Template Status and Known Limitations](known-limitations.html).
@@ -39,7 +39,9 @@ proposal. It states what the template computes. It also states the provisional
 steward's own rules for a check under a caloric restriction, for minimums
 raised by the AAFCO dry matter factor, for the arginine and large-breed puppy
 calcium minimums, and for which maximums can give `excess` (see
-[Bands and the adequacy interpretation](#bands-and-the-adequacy-interpretation)).
+[Bands and the adequacy interpretation](#bands-and-the-adequacy-interpretation)),
+and, for the code version, the energy that sets the limits and the choline maximum
+(see [Energy rules proposed for the code version](#energy-rules-proposed-for-the-code-version)).
 Like the rest of the page, these rules are pending ratification. Where the
 template is silent and no such rule is stated, the point is listed under
 [Open points](#open-points) and is not decided here. The template gives bands,
@@ -146,14 +148,19 @@ per kg BW^0.75 per day for dogs and per kg BW^0.67 per day for cats,
 where BW is the animal's body weight in kg. For adults the template asks for
 the optimal (lean) body weight, and for growing animals the current body
 weight; its note on cell A3 gives the standards' basis and one exception (NRC's
-equation for overweight cats, used with the current body weight). The template
-converts both limits to per Mcal:
+equation for overweight cats, used with the current body weight). For the code
+version the provisional steward proposes the current body weight for every animal
+instead (see [Energy rules proposed for the code version](#energy-rules-proposed-for-the-code-version)). The
+template converts both limits to per Mcal:
 
 `limit per Mcal = limit per kg BW^n per day × ((BW^n ÷ daily energy in kcal) × 1,000)`
 
 The daily energy is the template's calculated requirement for the selection and
 the animal, unless an intake is entered to override it. These per-Mcal limits
-therefore change with body weight and energy intake. When an MBW row has no
+therefore change with body weight and energy intake. Under the energy rules
+proposed for the code version, the minimums are converted with the energy fed and
+the maximums with the reference energy (see
+[below](#energy-rules-proposed-for-the-code-version)). When an MBW row has no
 maximum, K is 4, or 7 for sodium.
 
 Nine of the 21 selections have MBW values:
@@ -251,7 +258,9 @@ percentage does not change them. They are converted with the daily energy the
 template uses: the calculated requirement, which the percentage does not
 reduce, or an intake entered in its place.
 Converted with an entered intake, an MBW row's minimum supplies the standard's
-daily amount at that intake.
+daily amount at that intake. The energy rules proposed for the code version
+convert the MBW minimums with the energy fed instead, so a restriction raises them
+too, fat's excepted (see [below](#energy-rules-proposed-for-the-code-version)).
 
 An intake entered in place of the calculated requirement (cell K4, labelled
 "Overwrite & Use This Instead (kcal/day):") is not a restriction. Only a number
@@ -266,7 +275,10 @@ intake below the calculated requirement may meet the animal's whole need, or
 only part of it. Whether it is a restriction is for the user to say, by entering
 the percentage. For example, 1000 kcal/day entered where the calculated
 requirement is 1250 is not, by itself, a restriction. Entering 20 as the
-percentage as well says that 1000 kcal/day is 80% of the animal's need.
+percentage as well says that 1000 kcal/day is 80% of the animal's need. Under the
+energy rules proposed for the code version, an intake below the reference energy
+also raises some minimums under the adult maintenance selections (see
+[below](#energy-rules-proposed-for-the-code-version)).
 
 - An entered intake changes limits and bands only on the rows that the
   template converts with daily energy: the energy row (its minimum becomes the
@@ -281,6 +293,71 @@ percentage as well says that 1000 kcal/day is 80% of the animal's need.
   An Energy Intake 20.00% Below The Calculated Energy Requirement". The figure
   is information only: it is not the percentage, which only the user enters,
   and no limit or band uses it.
+
+#### Energy rules proposed for the code version
+
+**Proposed, pending ratification (provisional steward, 23 October 2026).** The
+template is frozen and keeps the rules described above. For the code version, its
+successor, the provisional steward proposes the rules below in their place. Every
+difference between the code version and the template, rule by rule and note by
+note, is recorded in the code version's repository
+(`docs/changes-from-21OCT26b.md`, to be published with the code).
+
+Two energies set the limits:
+
+- **Reference energy:** the energy a standard's per-Mcal figures assume, at the
+  current body weight: NRC's average adult dog, 130 × BW^0.75 kcal a day, for NRC
+  RA Dog Maintenance and AAFCO Dog Maintenance; NRC's lean adult cat,
+  100 × BW^0.67, for NRC RA Cat Maintenance and AAFCO Cat Maintenance, whatever
+  the cat type; FEDIAF's stated MER for the four FEDIAF adult selections; and for
+  every other selection, the energy equation used for its life stage. AAFCO
+  states no energy basis, so using NRC's for the AAFCO selections is the
+  steward's proposal. The adult dog or cat type never changes the reference
+  energy.
+- **Energy fed:** the intake entered, or else the calculated requirement (at the
+  optimal body weight, when one is used) less any caloric restriction.
+
+The rules:
+
+1. **Body weight** is the current body weight for every animal (for a lactating
+   queen, her body weight at mating), not the optimal body weight that the
+   template asks for in adults. An optional optimal body weight, for the adult
+   maintenance selections only, says that the energy calculated at that weight
+   is fed: when it is below the current body weight and no intake is entered, it
+   sets the energy fed. It does not lower the energy minimum.
+2. **MBW minimums** are converted to per Mcal with the energy fed, so a
+   restriction or an optimal body weight raises them too, and the diet still
+   supplies the standard's daily amount per kg BW^0.75 or BW^0.67. Fat is the
+   exception: neither fat row is raised by a restriction or an optimal body
+   weight, because fat per se is not essential.
+3. **MBW maximums** are converted with the reference energy (or, where none can
+   be calculated, as after week 4 of lactation, with the intake entered). They
+   therefore do not change per Mcal with the adult type, an intake, a restriction
+   or an optimal body weight, like the maximums a standard states per Mcal: the
+   daily ceiling falls with the energy fed.
+4. **The energy factor**, reference energy ÷ energy fed, never below 1: under the
+   eight adult maintenance selections, on a row with no MBW minimum, the per-Mcal
+   minimum is multiplied by the larger of the energy factor and the restriction
+   factor. So an intake below the reference energy, or an adult type below NRC's
+   average, raises these minimums, the AAFCO minimums among them, as the AAFCO
+   selections have no MBW values. The template never raises the minimum of a
+   per-Mcal row for an intake. Under the growth, gestation and lactation
+   selections, where the animal is fed more energy than it needs to keep its
+   weight stable and the extra goes to growth, a pregnancy or milk, nutrient needs
+   rise and fall with the energy fed: the per-Mcal minimums hold at any intake,
+   and only a restriction raises them.
+5. **An energy fed below 10% of the reference energy** is rejected as an input
+   error.
+6. **The choline maximum** under the four NRC dog selections, NRC's presumed safe
+   maximum of 500 mg/Mcal, is at least 1.1 times the higher of the choline
+   minimum and the choline MBW minimum converted to per Mcal. A maximum raised
+   this way is coded TPL, so a value above it is never `excess`. No standard sets
+   a choline maximum from controlled safety data; calcium, whose tight control
+   has data behind it, keeps the template's narrower rule (1.1 times the minimum
+   only once the minimum is above the maximum).
+
+Each result of the code version states the reference energy and its basis, the
+energy fed, the energy factor, and these rules in words.
 
 #### The AAFCO dry matter factor
 
@@ -628,7 +705,8 @@ interpretation tests do is open (see [Open points](#open-points), item 7).
   raised minimum can exceed a maximum taken from a standard: above 29.6%,
   FEDIAF's legal maximum for selenium (conditional) under the two FEDIAF dog
   growth selections, and above 32%, the first authoritative one, the choline
-  maximum under the four NRC dog selections (see
+  maximum under the four NRC dog selections (under the energy rules proposed for
+  the code version, that maximum rises with the minimum instead; see
   [A maximum below the minimum](#a-maximum-below-the-minimum) and
   [Conflicts for the governance body](#conflicts-for-the-governance-body)). A
   value below the raised minimum and above that maximum is `deficient`, and
@@ -678,7 +756,7 @@ provisional steward's proposal, pending ratification.
 | SUL | a 2006 NRC safe upper limit (SUL), per Mcal as printed or converted by NRC's own unit factors | 52 | `authoritative` |
 | SUL> | an NRC SUL printed as a lower bound: a greater-than value, entered with the 0.000000001 addition, or NRC's adult dog iodine limit of at least 4 mg per kg DM, entered without it | 17 | `authoritative` |
 | SULm, SULm> | the same per kg BW^0.75 or BW^0.67, converted to per Mcal with the daily energy (no cell is SULm> in Version 21OCT26) | 12 | `authoritative` |
-| PSM | NRC's presumed safe maximum for choline, given in its text, not its tables (2006 NRC page 233): 500 mg/Mcal, under the four NRC dog selections only | 4 | `authoritative` |
+| PSM | NRC's presumed safe maximum for choline, given in its text, not its tables (2006 NRC page 233): 500 mg/Mcal, under the four NRC dog selections only; for the code version the steward proposes at least 1.1 times the higher choline minimum, then coded TPL (see [Energy rules proposed for the code version](#energy-rules-proposed-for-the-code-version)) | 4 | `authoritative` |
 | AAFCO | a 2026 AAFCO profile maximum | 44 | `authoritative`; all 44, the Ca:P maximum included, `conditional` while the AAFCO dry matter factor is above 1 |
 | N | a FEDIAF nutritional maximum | 42 | `authoritative` |
 | N* | a FEDIAF nutritional maximum used beyond the life stage it is stated for: the FEDIAF Dog Late Growth Ca:P maximum, and the FEDIAF Cat Reproduction arginine, methionine, tryptophan and Ca:P maximums, which FEDIAF's Table III-4b states for growth | 5 | `conditional` |
@@ -1028,7 +1106,8 @@ template's default inputs (body weight 15 kg for dogs) unless stated.
    selections and AAFCO Large Breed Dog Growth (above 33.3%), and above 37.5%
    the phosphorus maximum under the two AAFCO dog growth selections and the
    calcium maximum under FEDIAF Dog Early Growth (< 14 wk) & Reproduction,
-   among others up to 55%.
+   among others up to 55%. Under the energy rules proposed for the code version,
+   the choline maximum rises with the minimum and is no longer passed.
 10. **Minimums above maximums under the AAFCO dry matter factor.** With no
     restriction, AAFCO Large Breed Dog Growth's calcium minimum passes its
     maximum below 2⅔ kcal/g DM, about 2.67 (3 × 4 ÷ energy density against
@@ -1043,7 +1122,10 @@ template's default inputs (body weight 15 kg for dogs) unless stated.
 11. **The choline MBW minimum and the per-Mcal maximum.** Under NRC RA Dog
     Maintenance, the choline minimum per kg BW^0.75, converted with an intake
     entered in K4 below 90 kcal per kg BW^0.75, is above the 500 mg/Mcal
-    maximum.
+    maximum. Under the energy rules proposed for the code version, a restriction
+    or an optimal body weight can bring the energy fed that low too, and the
+    maximum rises to at least 1.1 times the minimum, so a diet can meet both
+    rows.
 12. **NRC's large-breed puppy calcium rule and its calcium safe upper
     limit.** For puppies of more than 25 kg expected mature body weight, up to
     14 weeks of age, NRC asks at least 0.54 g of calcium per kg of body weight
