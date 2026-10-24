@@ -18,7 +18,9 @@ template sets or computes, which the computation uses.
   in the guide's
   [source repository](https://github.com/openanimalnutrition/animal-nutrition-ig).
   The issue stays open until the governance body ratifies. Please report there
-  any difference between this page and the template's formulas.
+  any difference between this page and the template's formulas. To challenge
+  a rule, or to report a data error, use the issue forms in the
+  [checker's repository](https://github.com/openanimalnutrition/animal-nutrition-checker/issues/new/choose).
 - **Source:** the *Standardized Nutrient Ranges \| Dynamic Decile System
   Table*, Version 21OCT26b, live since 21 October 2026, an open spreadsheet
   template. Version 21OCT26b is Version 21OCT26 with the wording of four texts
@@ -28,7 +30,8 @@ template sets or computes, which the computation uses.
   disclosure of interest.
 - **The template is frozen:** Version 21OCT26 is its final feature version.
   From now on only errors are corrected, each as a new version with its own
-  label. A code version (Python) is in development. It becomes the
+  label. A code version (Python), the
+  [checker](https://github.com/openanimalnutrition/animal-nutrition-checker), is in development. It becomes the
   reference once it reproduces the template's published test cases; until
   then the template remains the reference. See
   [Template Status and Known Limitations](known-limitations.html).
@@ -302,7 +305,7 @@ template is frozen and keeps the rules described above. For the code version, it
 successor, the provisional steward proposes the rules below in their place. Every
 difference between the code version and the template, rule by rule and note by
 note, is recorded in the code version's repository
-(`docs/changes-from-21OCT26b.md`, to be published with the code).
+([`docs/changes-from-21OCT26b.md`](https://github.com/openanimalnutrition/animal-nutrition-checker/blob/main/docs/changes-from-21OCT26b.md)).
 
 Two energies set the limits:
 

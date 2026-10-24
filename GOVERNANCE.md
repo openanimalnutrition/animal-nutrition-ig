@@ -14,6 +14,14 @@ standard models only the adequacy verdict. It does not reference, require, or
 favor any product, ingredient, supplement, or vendor, and no change to it may
 introduce such a reference.
 
+Sean Delaney, DVM, MS, DACVIM (Nutrition), who acts for the provisional steward,
+is the lead co-editor and a co-author of *Applied Veterinary Clinical
+Nutrition*, 2nd edition, and an author of two other works the reference checker
+cites. Box 3.1 of that book gives the daily energy the checker uses for growing
+puppies and kittens under the three AAFCO growth requirements, as AAFCO sets no
+energy requirement; Delaney and Dzanis (2018) and Delaney (2015) are cited in
+its notes on vitamin K and vitamin D2.
+
 ## Transfer intent
 DVM Consulting intends to transfer stewardship of the canonical namespace
 (`openanimalnutrition.org`), the GitHub organization, and editorial control of
@@ -80,6 +88,14 @@ resolve.
 Template: https://docs.google.com/spreadsheets/d/1_NlceDeCp123h18wivMIScsy4GsCH7bRL-XOTqm_bLY
 
 These three items are the governance body's standing first agenda.
+
+## Challenging a rule
+To challenge a rule of this standard or of its reference checker, or to report
+a data error, use the issue forms in the checker's repository:
+https://github.com/openanimalnutrition/animal-nutrition-checker/issues/new/choose. Everything in an
+issue is public. Without a GitHub account, email admin+oan@dvmconsulting.com,
+and the provisional steward files it as a public issue. The provisional steward
+answers in the issue; once formed, the governance body decides.
 
 ## License
 CC0 1.0 Universal.

@@ -44,7 +44,8 @@ The computation follows the *Standardized Nutrient Ranges \| Dynamic Decile
 System Table*, Version 21OCT26b, an open spreadsheet template: Version
 21OCT26, the template's final feature version, with the wording of four texts
 corrected. From now on only errors are corrected.
-A code version (Python) is in development and becomes the reference
+A code version (Python), the
+[checker](https://github.com/openanimalnutrition/animal-nutrition-checker), is in development and becomes the reference
 once it reproduces the template's published test cases. The template's status,
 its known limitations and the errata for earlier versions are on the
 [Template Status and Known Limitations](known-limitations.html) page.
