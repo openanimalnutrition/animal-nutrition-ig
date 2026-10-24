@@ -40,7 +40,8 @@ steward's own rules for a check under a caloric restriction, for minimums
 raised by the AAFCO dry matter factor, for the arginine and large-breed puppy
 calcium minimums, and for which maximums can give `excess` (see
 [Bands and the adequacy interpretation](#bands-and-the-adequacy-interpretation)),
-and, for the code version, the energy that sets the limits and the choline maximum
+and, for the code version, the energy that sets the limits, the choline maximum and
+the ratios
 (see [Energy rules proposed for the code version](#energy-rules-proposed-for-the-code-version)).
 Like the rest of the page, these rules are pending ratification. Where the
 template is silent and no such rule is stated, the point is listed under
@@ -296,7 +297,7 @@ also raises some minimums under the adult maintenance selections (see
 
 #### Energy rules proposed for the code version
 
-**Proposed, pending ratification (provisional steward, 23 October 2026).** The
+**Proposed, pending ratification (provisional steward, 23 and 24 October 2026).** The
 template is frozen and keeps the rules described above. For the code version, its
 successor, the provisional steward proposes the rules below in their place. Every
 difference between the code version and the template, rule by rule and note by
@@ -321,7 +322,15 @@ The rules:
 
 1. **Body weight** is the current body weight for every animal (for a lactating
    queen, her body weight at mating), not the optimal body weight that the
-   template asks for in adults. An optional optimal body weight, for the adult
+   template asks for in adults. This is a layer beyond the standards,
+   complementary to them: their figures are based on growth or on a stable body
+   weight, never on weight loss, which is often taken as a sign of nutrient
+   deficiency rather than a desired outcome. When an animal is fed less to lose
+   weight, the minimums rise so that its needs are still met. A caloric
+   restriction is a cut from what the animal eats at its current weight, not
+   from an equation's estimate, and back-calculating an optimal weight from body
+   condition involves too much variability and calculation for clinical
+   practice. An optional optimal body weight, for the adult
    maintenance selections only, says that the energy calculated at that weight
    is fed: when it is below the current body weight and no intake is entered, it
    sets the energy fed. It does not lower the energy minimum.
@@ -329,17 +338,19 @@ The rules:
    restriction or an optimal body weight raises them too, and the diet still
    supplies the standard's daily amount per kg BW^0.75 or BW^0.67. Fat is the
    exception: neither fat row is raised by a restriction or an optimal body
-   weight, because fat per se is not essential.
+   weight, also when the restriction is entered with an intake, because fat per
+   se is not essential.
 3. **MBW maximums** are converted with the reference energy (or, where none can
    be calculated, as after week 4 of lactation, with the intake entered). They
    therefore do not change per Mcal with the adult type, an intake, a restriction
    or an optimal body weight, like the maximums a standard states per Mcal: the
    daily ceiling falls with the energy fed.
 4. **The energy factor**, reference energy ÷ energy fed, never below 1: under the
-   eight adult maintenance selections, on a row with no MBW minimum, the per-Mcal
-   minimum is multiplied by the larger of the energy factor and the restriction
-   factor. So an intake below the reference energy, or an adult type below NRC's
-   average, raises these minimums, the AAFCO minimums among them, as the AAFCO
+   eight adult maintenance selections, on a row with no MBW minimum (fat's and
+   the ratios' excepted), the per-Mcal minimum is multiplied by the larger of the
+   energy factor and the restriction factor. So an intake below the reference
+   energy, or an adult type below NRC's average, raises these minimums, the
+   AAFCO minimums among them (all but fat and the ratios), as the AAFCO
    selections have no MBW values. The template never raises the minimum of a
    per-Mcal row for an intake. Under the growth, gestation and lactation
    selections, where the animal is fed more energy than it needs to keep its
@@ -353,8 +364,20 @@ The rules:
    minimum and the choline MBW minimum converted to per Mcal. A maximum raised
    this way is coded TPL, so a value above it is never `excess`. No standard sets
    a choline maximum from controlled safety data; calcium, whose tight control
-   has data behind it, keeps the template's narrower rule (1.1 times the minimum
-   only once the minimum is above the maximum).
+   has data behind it, keeps the template's narrower rule: on the template's
+   extra calcium row for NRC puppies 4 to 14 weeks old of a large expected size,
+   the range high is 1.1 times that row's minimum only once the minimum is above
+   NRC's 4.5 g/Mcal safe upper limit. The calcium row itself keeps 4.5 g/Mcal,
+   and no selection's own calcium maximum, such as AAFCO's 4.5 g/Mcal for
+   large-breed growth, ever rises.
+7. **Ratios** do not change with a restriction or a low energy fed, as a
+   ratio's numerator and denominator rise together. Where a standard states no
+   ratio, its range is computed from the other rows' minimums and maximums with
+   the minimums before any restriction or energy factor (LA + AA : ALA + EPA +
+   DHA and LA + AA : EPA + DHA under the NRC selections and FEDIAF Dog Early
+   Growth & Reproduction, and the Ca:P maximum under the NRC puppy selections).
+   The template computes them from the raised minimums, so a restriction narrows
+   the range: at 30%, the NRC puppies' Ca:P maximum falls from 1.8 to 1.26.
 
 Each result of the code version states the reference energy and its basis, the
 energy fed, the energy factor, and these rules in words.
