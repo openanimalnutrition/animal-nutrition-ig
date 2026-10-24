@@ -31,12 +31,18 @@ template's words (cells A133 to A135):
 > https://github.com/openanimalnutrition (openanimalnutrition.org is the
 > planned future address).
 
-- **Reproducing the test cases** means giving the template's results on its
-  released test cases. Any case where the code version gives a different
-  result, for example where it corrects an error in the template, is to be
-  recorded with its reason and approved by the provisional steward before the
-  code version becomes the reference. The code version (Python) reads one
-  shared data file of requirement values.
+- **The code version is now the reference.** The condition above has been
+  met. The code version (Python), the
+  [checker](https://github.com/openanimalnutrition/animal-nutrition-checker),
+  run with the template's rules, which it keeps for this check, gives the
+  template's results on its released test cases, and the provisional steward
+  approved, on 22 October 2026, each case where it gives a different result,
+  with its reason. It has been the reference since 24 October 2026, from its
+  release 0.5.0. Its own rules that differ from the template's, set on 23
+  and 24 October 2026, are recorded with their reasons in its
+  [changes document](https://github.com/openanimalnutrition/animal-nutrition-checker/blob/main/docs/changes-from-21OCT26b.md).
+  It reads its requirement values, each with its source, from its data
+  folder.
 - **The adequacy interpretation stays proposed.** Which values are
   `deficient` or `excess` is the provisional steward's proposal, pending
   ratification by the governance body, in the code version as on the

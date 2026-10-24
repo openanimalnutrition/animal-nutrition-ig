@@ -59,11 +59,20 @@ requirement data with AI assistance. The guide's
 [Decile Basis and Band Computation](input/pagecontent/band-computation.md)
 page names the template version it follows, Version 21OCT26b, an error-fix
 version of 21OCT26, the template's final feature version (frozen except for
-error fixes; a code version is to
-become the reference once it reproduces the template's published test cases).
-The changes made since those reviews, including new band tests, new inputs
-and several changed limits, are listed in the template's History of Change(s)
-tab. In the template, levels below the
+error fixes). The changes made since those reviews, including new band tests,
+new inputs and several changed limits, are listed in the template's History of
+Change(s) tab. The code version, the
+[checker](https://github.com/openanimalnutrition/animal-nutrition-checker),
+reproduced the template's published test cases and has been the reference
+since 24 October 2026, from its release 0.5.0. Its rules that differ from the
+template's date from 23 and 24 October 2026; neither the advisory board nor
+the group of nutritionists has reviewed them. They are listed with their
+reasons in its
+[changes document](https://github.com/openanimalnutrition/animal-nutrition-checker/blob/main/docs/changes-from-21OCT26b.md)
+and can be challenged as described under
+[Challenging a rule](#challenging-a-rule).
+
+In the template, levels below the
 minimum fall into four bands (under 25%, 25 to under 50%, 50 to under 75%, and
 75 to under 100% of the minimum), and the span from the minimum to the range
 high is divided into ten deciles. Each band runs from its lower edge up to, but

@@ -14,7 +14,12 @@ issue #4 tracks ratification. That page follows the source template's Version 21
 version of 21OCT26, its final feature version (frozen except for error
 fixes); the
 template's status and known limitations are in
-`input/pagecontent/known-limitations.md`.
+`input/pagecontent/known-limitations.md`. The code version, the
+[checker](https://github.com/openanimalnutrition/animal-nutrition-checker),
+reproduced the template's published test cases and has been the reference
+since 24 October 2026, from its release 0.5.0; its rules that differ from the
+template's are proposed, pending ratification, and listed in its
+[changes document](https://github.com/openanimalnutrition/animal-nutrition-checker/blob/main/docs/changes-from-21OCT26b.md).
 
 The project's address is https://github.com/openanimalnutrition for now;
 openanimalnutrition.org, the domain of the canonical URL below, is the planned
