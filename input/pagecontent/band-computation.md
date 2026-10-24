@@ -18,7 +18,8 @@ template sets or computes, which the computation uses.
   in the guide's
   [source repository](https://github.com/openanimalnutrition/animal-nutrition-ig).
   The issue stays open until the governance body ratifies. Please report there
-  any difference between this page and the template's formulas. To challenge
+  any difference between this page and the template's formulas or the
+  checker. To challenge
   a rule, or to report a data error, use the issue forms in the
   [checker's repository](https://github.com/openanimalnutrition/animal-nutrition-checker/issues/new/choose).
 - **Source:** the *Standardized Nutrient Ranges \| Dynamic Decile System
@@ -30,10 +31,19 @@ template sets or computes, which the computation uses.
   disclosure of interest.
 - **The template is frozen:** Version 21OCT26 is its final feature version.
   From now on only errors are corrected, each as a new version with its own
-  label. A code version (Python), the
-  [checker](https://github.com/openanimalnutrition/animal-nutrition-checker), is in development. It becomes the
-  reference once it reproduces the template's published test cases; until
-  then the template remains the reference. See
+  label.
+- **The checker is the reference:** the code version (Python), the
+  [checker](https://github.com/openanimalnutrition/animal-nutrition-checker),
+  has been the reference since 24 October 2026, from its release 0.5.0, in
+  place of the template. Run with the template's rules, which it keeps for
+  that check, it reproduces the template's published test cases (parity
+  approved by the provisional steward on 22 October 2026). Where it
+  differs from the template, the
+  [energy rules proposed for the code version](#energy-rules-proposed-for-the-code-version)
+  apply, and every difference is recorded with its reason in its
+  [changes document](https://github.com/openanimalnutrition/animal-nutrition-checker/blob/main/docs/changes-from-21OCT26b.md).
+  Being the reference does not ratify its rules: they remain proposed, like
+  the rest of this page. See
   [Template Status and Known Limitations](known-limitations.html).
 
 The page is written for implementers (people, software and AI checkers) who
@@ -302,7 +312,9 @@ also raises some minimums under the adult maintenance selections (see
 
 **Proposed, pending ratification (provisional steward, 23 and 24 October 2026).** The
 template is frozen and keeps the rules described above. For the code version, its
-successor, the provisional steward proposes the rules below in their place. Every
+successor and the reference since 24 October 2026, the provisional steward proposes
+the rules below in their place. They date from after the reviews of the template
+described in GOVERNANCE.md, and those reviewers have not reviewed them. Every
 difference between the code version and the template, rule by rule and note by
 note, is recorded in the code version's repository
 ([`docs/changes-from-21OCT26b.md`](https://github.com/openanimalnutrition/animal-nutrition-checker/blob/main/docs/changes-from-21OCT26b.md)).
