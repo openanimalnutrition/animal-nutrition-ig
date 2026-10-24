@@ -35,8 +35,8 @@ template's words (cells A133 to A135):
   released test cases. Any case where the code version gives a different
   result, for example where it corrects an error in the template, is to be
   recorded with its reason and approved by the provisional steward before the
-  code version becomes the reference. The Python and Rust code are planned to
-  read one shared data file of requirement values.
+  code version becomes the reference. The code version (Python) reads one
+  shared data file of requirement values.
 - **The adequacy interpretation stays proposed.** Which values are
   `deficient` or `excess` is the provisional steward's proposal, pending
   ratification by the governance body, in the code version as on the
