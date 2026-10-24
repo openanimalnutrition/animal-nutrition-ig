@@ -39,8 +39,9 @@ template sets or computes, which the computation uses.
   that check, it reproduces the template's published test cases (parity
   approved by the provisional steward on 22 October 2026). Where it
   differs from the template, the
-  [energy rules proposed for the code version](#energy-rules-proposed-for-the-code-version)
-  apply, and every difference is recorded with its reason in its
+  [energy rules](#energy-rules-proposed-for-the-code-version) and the
+  [other rules](#other-rules-proposed-for-the-code-version) proposed for the code
+  version apply, and every difference is recorded with its reason in its
   [changes document](https://github.com/openanimalnutrition/animal-nutrition-checker/blob/main/docs/changes-from-21OCT26b.md).
   Being the reference does not ratify its rules: they remain proposed, like
   the rest of this page. See
@@ -397,6 +398,33 @@ The rules:
 Each result of the code version states the reference energy and its basis, the
 energy fed, the energy factor, and these rules in words.
 
+#### Other rules proposed for the code version
+
+**Proposed, pending ratification (provisional steward, 24 October 2026).** Like the
+energy rules above, these apply to the code version only; the frozen template keeps
+the rules described on this page. Each followed a test in which other AI models read
+the code version's results, and each is recorded in its changes document.
+
+1. **AAFCO's maximums on dry matter.** Under the AAFCO selections, for a food below
+   4 kcal/g DM with its energy density entered, AAFCO's maximums are, like its
+   minimums, AAFCO's dry-matter values per Mcal of the food: the maximum per Mcal
+   times the AAFCO dry matter factor (4 ÷ energy density). Ratios are not changed.
+   They are `authoritative`, as AAFCO compares such a food on dry matter; the
+   template keeps them per Mcal, and for the template this guide counts them as
+   `conditional` (see [The AAFCO dry matter factor](#the-aafco-dry-matter-factor)
+   and [Maximum types](#maximum-types)).
+2. **The large-breed puppy calcium row** (NRC RA Puppy 4-14 Wk Growth) applies only
+   to an expected mature body weight over 25 kg, as NRC's footnote h states, and its
+   body-weight minimum uses the current body weight. The template applied it
+   whenever its optional puppy body weight was entered.
+3. **A nutrient's two rows.** A value entered on one of a nutrient's per-Mcal and
+   MBW rows is also checked on the other when that one is not entered: both take
+   the diet's per-Mcal value. The template checked only the rows entered.
+4. **NRC's fatty acid advice checks** never count a nutrient that is not entered as
+   0: a check that needs one is not checked, and names it. A nutrient entered as one
+   value counts with both the low and the high entries of the other. The template
+   counted a nutrient not entered as 0.
+
 #### The AAFCO dry matter factor
 
 The 2026 AAFCO profiles presume 4 kcal ME per g of dry matter and state that a
@@ -425,7 +453,8 @@ about 72.2 g/Mcal, which is 26% protein in dry matter.
   template's cautious choice, so a food at an AAFCO dry-matter maximum can
   read above the per-Mcal maximum here. While the factor is above 1, this guide
   counts AAFCO's maximums as conditional (see
-  [Maximum types](#maximum-types)).
+  [Maximum types](#maximum-types)). The code version raises them as it does the
+  minimums (see [Other rules proposed for the code version](#other-rules-proposed-for-the-code-version)).
 - The multiplied minimum equals AAFCO's dry-matter value to within the
   rounding between AAFCO's two tables, except for 7 values that AAFCO prints
   differently in them: for cats, valine for growth and reproduction, and
@@ -738,7 +767,8 @@ interpretation tests do is open (see [Open points](#open-points), item 7).
   AAFCO's printed dry-matter value: for them this is open (see
   [Open points](#open-points), item 6).
   While the factor is above 1, AAFCO's maximums are `conditional` (see
-  [Maximum types](#maximum-types)).
+  [Maximum types](#maximum-types)); in the code version they are AAFCO's
+  dry-matter maximums for the food, and `authoritative`.
 - **A raised minimum above a maximum.** From a restriction of about 30%, a
   raised minimum can exceed a maximum taken from a standard: above 29.6%,
   FEDIAF's legal maximum for selenium (conditional) under the two FEDIAF dog
@@ -795,7 +825,7 @@ provisional steward's proposal, pending ratification.
 | SUL> | an NRC SUL printed as a lower bound: a greater-than value, entered with the 0.000000001 addition, or NRC's adult dog iodine limit of at least 4 mg per kg DM, entered without it | 17 | `authoritative` |
 | SULm, SULm> | the same per kg BW^0.75 or BW^0.67, converted to per Mcal with the daily energy (no cell is SULm> in Version 21OCT26) | 12 | `authoritative` |
 | PSM | NRC's presumed safe maximum for choline, given in its text, not its tables (2006 NRC page 233): 500 mg/Mcal, under the four NRC dog selections only; for the code version the steward proposes at least 1.1 times the higher choline minimum, then coded TPL (see [Energy rules proposed for the code version](#energy-rules-proposed-for-the-code-version)) | 4 | `authoritative` |
-| AAFCO | a 2026 AAFCO profile maximum | 44 | `authoritative`; all 44, the Ca:P maximum included, `conditional` while the AAFCO dry matter factor is above 1 |
+| AAFCO | a 2026 AAFCO profile maximum | 44 | `authoritative`; all 44, the Ca:P maximum included, `conditional` while the AAFCO dry matter factor is above 1 (in the code version, `authoritative`: AAFCO's dry-matter maximum for the food) |
 | N | a FEDIAF nutritional maximum | 42 | `authoritative` |
 | N* | a FEDIAF nutritional maximum used beyond the life stage it is stated for: the FEDIAF Dog Late Growth Ca:P maximum, and the FEDIAF Cat Reproduction arginine, methionine, tryptophan and Ca:P maximums, which FEDIAF's Table III-4b states for growth | 5 | `conditional` |
 | SULm* | an NRC SUL per kg BW^0.67, as printed or as a greater-than value, that NRC states only for its reference kitten or queen, used for every kitten (NRC RA Kitten Growth) or queen (NRC RA Cat Peak Lactation) | 23 | `conditional` |
@@ -814,7 +844,8 @@ provisional steward's proposal, pending ratification.
   queen (SULm*), as does NRC's presumed safe maximum for choline: where safety
   data are lacking, the provisional steward uses any data that suggest
   possible toxicity until better data exist. AAFCO's maximums count except
-  while the AAFCO dry matter factor is above 1.
+  while the AAFCO dry matter factor is above 1 (in the code version they count
+  then too, as AAFCO's dry-matter maximums for the food).
 - **Conditional** means a standard's figure that is not a maximum for every
   diet and animal the selection covers: a maximum that applies only under a
   condition the template cannot check (FEDIAF's legal maximums apply only to
