@@ -400,10 +400,11 @@ energy fed, the energy factor, and these rules in words.
 
 #### Other rules proposed for the code version
 
-**Proposed, pending ratification (provisional steward, 24 October 2026).** Like the
-energy rules above, these apply to the code version only; the frozen template keeps
-the rules described on this page. Each followed a test in which other AI models read
-the code version's results, and each is recorded in its changes document.
+**Proposed, pending ratification (provisional steward, 24 October 2026; item 5, 25
+October 2026).** Like the energy rules above, these apply to the code version only;
+the frozen template keeps the rules described on this page. Each followed a test in
+which other AI models read the code version's results, and each is recorded in its
+changes document.
 
 1. **AAFCO's maximums on dry matter.** Under the AAFCO selections, for a food below
    4 kcal/g DM with its energy density entered, AAFCO's maximums are, like its
@@ -422,8 +423,19 @@ the code version's results, and each is recorded in its changes document.
    the diet's per-Mcal value. The template checked only the rows entered.
 4. **NRC's fatty acid advice checks** never count a nutrient that is not entered as
    0: a check that needs one is not checked, and names it. A nutrient entered as one
-   value counts with both the low and the high entries of the other. The template
-   counted a nutrient not entered as 0.
+   value counts with both the low and the high entries of the other; nutrients entered
+   as ranges give the lowest and highest ratios they allow. The template counted a
+   nutrient not entered as 0, and read the low entries together and the high entries
+   together.
+5. **Ratios computed from their parts.** A ratio that the selection's standard sets
+   (Ca : P under the AAFCO and FEDIAF selections; LA + AA : ALA + EPA + DHA under
+   AAFCO's dog selections), not entered while every part of it is, is computed from
+   the parts entered and checked as an entry. A part entered as one value counts on
+   both sides; ranges give the lowest and highest ratios they allow; a numerator of 0
+   gives a ratio of 0, and a denominator of 0 or a part below 0 gives none. An
+   entered ratio is checked as entered, with a warning when its parts give another.
+   The template checked a ratio only as typed, so an inverted Ca : P went unreported
+   when calcium and phosphorus each passed their own rows.
 
 #### The AAFCO dry matter factor
 
