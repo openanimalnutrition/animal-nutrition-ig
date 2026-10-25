@@ -14,6 +14,13 @@ standard models only the adequacy verdict. It does not reference, require, or
 favor any product, ingredient, supplement, or vendor, and no change to it may
 introduce such a reference.
 
+DVM Consulting pays the costs of the `openanimalnutrition.org` domain and of
+hosting the reference checker, which runs in a dedicated AWS account in DVM
+Consulting's AWS organization. It does so until a governance body decides how
+the project is hosted and funded, and whether to accept transfer of that
+account. The costs are listed in the checker's
+[`docs/OPERATIONS.md`](https://github.com/openanimalnutrition/animal-nutrition-checker/blob/main/docs/OPERATIONS.md).
+
 Sean Delaney, DVM, MS, DACVIM (Nutrition), who acts for the provisional steward,
 is the lead co-editor and a co-author of *Applied Veterinary Clinical
 Nutrition*, 2nd edition, and an author of two other works the reference checker
@@ -24,8 +31,9 @@ its notes on vitamin K and vitamin D2.
 
 ## Transfer intent
 DVM Consulting intends to transfer stewardship of the canonical namespace
-(`openanimalnutrition.org`), the GitHub organization, and editorial control of
-this guide to a neutral, multi-stakeholder body.
+(`openanimalnutrition.org`), the GitHub organization, the AWS account that hosts
+the reference checker, and editorial control of this guide to a neutral,
+multi-stakeholder body.
 
 - **Recipient class:** an HL7 work group, an academic/professional consortium
   (e.g. involving VTSL and ACVIM Nutrition diplomates), or an equivalent neutral
