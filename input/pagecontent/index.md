@@ -43,7 +43,9 @@ page.
 The computation follows the *Standardized Nutrient Ranges \| Dynamic Decile
 System Table*, Version 21OCT26b, an open spreadsheet template: Version
 21OCT26, the template's final feature version, with the wording of four texts
-corrected. From now on only errors are corrected.
+corrected. Its last version, 21OCT26c, changes only its status text, to name
+the checker as the reference. The template is retired: it is no longer
+changed, and corrections are made in the checker.
 A code version (Python), the
 [checker](https://github.com/openanimalnutrition/animal-nutrition-checker), reproduced the
 template's published test cases and has been the reference since 24 October
@@ -54,10 +56,12 @@ The template's status,
 its known limitations and the errata for earlier versions are on the
 [Template Status and Known Limitations](known-limitations.html) page.
 
-For now the project's address is
-[github.com/openanimalnutrition](https://github.com/openanimalnutrition).
-openanimalnutrition.org, the domain in this guide's canonical URLs, is the
-planned future address.
+The checker runs at [openanimalnutrition.org](https://openanimalnutrition.org/)
+(for AI systems: https://checker.openanimalnutrition.org/mcp). This guide is
+not yet published there: for now its address is
+[github.com/openanimalnutrition](https://github.com/openanimalnutrition), and
+its canonical URLs, under openanimalnutrition.org/fhir/animal-nutrition, are
+its planned address.
 
 #### Scope (v0.1)
 

@@ -66,8 +66,9 @@ took in all the feedback received; no formal change request was raised after
 requirement data with AI assistance. The guide's
 [Decile Basis and Band Computation](input/pagecontent/band-computation.md)
 page names the template version it follows, Version 21OCT26b, an error-fix
-version of 21OCT26, the template's final feature version (frozen except for
-error fixes). The changes made since those reviews, including new band tests,
+version of 21OCT26, the template's final feature version (now retired: its
+last version, 21OCT26c, changed only its status text, and corrections are made
+in the checker). The changes made since those reviews, including new band tests,
 new inputs and several changed limits, are listed in the template's History of
 Change(s) tab. The code version, the
 [checker](https://github.com/openanimalnutrition/animal-nutrition-checker),
