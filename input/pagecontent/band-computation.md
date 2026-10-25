@@ -23,15 +23,16 @@ template sets or computes, which the computation uses.
   a rule, or to report a data error, use the issue forms in the
   [checker's repository](https://github.com/openanimalnutrition/animal-nutrition-checker/issues/new/choose).
 - **Source:** the *Standardized Nutrient Ranges \| Dynamic Decile System
-  Table*, Version 21OCT26b, live since 21 October 2026, an open spreadsheet
-  template. Version 21OCT26b is Version 21OCT26 with the wording of four texts
-  corrected and no value or formula changed (see
+  Table*, Version 21OCT26b, an open spreadsheet template: Version 21OCT26
+  with the wording of four texts corrected. Its last version, 21OCT26c (25
+  October 2026), changes only its status text, to name the checker as the
+  reference. Neither changed a value or formula (see
   [Earlier versions](#earlier-versions)), so what this page says of Version
-  21OCT26 holds for it. GOVERNANCE.md links to it and states the steward's
-  disclosure of interest.
-- **The template is frozen:** Version 21OCT26 is its final feature version.
-  From now on only errors are corrected, each as a new version with its own
-  label.
+  21OCT26 holds for both. GOVERNANCE.md links to the template and states the
+  steward's disclosure of interest.
+- **The template is retired:** Version 21OCT26 is its final feature version,
+  and 21OCT26c its last version. It is no longer changed; corrections are made
+  in the checker and recorded in its changes document.
 - **The checker is the reference:** the code version (Python), the
   [checker](https://github.com/openanimalnutrition/animal-nutrition-checker),
   has been the reference since 24 October 2026, from its release 0.5.0, in
@@ -1219,7 +1220,14 @@ template's default inputs (body weight 15 kg for dogs) unless stated.
 
 ### Earlier versions
 
-Version 21OCT26b, made the same day (History of Change(s), row 12), corrects
+Version 21OCT26c, made on 25 October 2026 (History of Change(s), row 13), is
+the template's last version. Its status text (cells A134 and A135 of the
+Standards tab) said the code version was in development and the template the
+reference; it now names the checker at https://openanimalnutrition.org/ as the
+reference since 24 October 2026, and the banner (cell A2) points to it. No
+value or formula changed.
+
+Version 21OCT26b, made the same day as Version 21OCT26 (History of Change(s), row 12), corrects
 the wording of four texts that said per kg body weight for values per kg
 BW^0.75 or BW^0.67: the status items in cells A145 and A146 of the Standards
 tab and the notes on cells AG3 and AQ3 of the Healthy Dog Cat Reqt Data tab.

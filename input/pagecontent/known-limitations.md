@@ -1,7 +1,7 @@
 This page is for readers who use the source template's data without its cell
 notes: exports, programs and AI checkers. It gives the template's status and
 its known limitations, as the template's own status block states them
-(Standards tab, cell A2 and rows 132 to 149, Version 21OCT26b), and the errata
+(Standards tab, cell A2 and rows 132 to 149, Version 21OCT26c), and the errata
 for copies of earlier versions. The template's cell notes named below give the
 details. How the template computes the bands, and the proposed rules for a
 verdict, are on the
@@ -10,9 +10,9 @@ verdict, are on the
 ### Status
 
 The source template is the *Standardized Nutrient Ranges \| Dynamic Decile
-System Table*. Its Version 21OCT26b has been live since 21 October 2026: the
-final feature version, 21OCT26, with the wording of four texts corrected. In
-the
+System Table*. Its last version, 21OCT26c, has been live since 25 October
+2026: the final feature version, 21OCT26, with the wording of four texts
+corrected (21OCT26b) and its status text updated (21OCT26c). In the
 template's words (cells A133 to A135):
 
 > Status: this is the final feature version of this sheet. It is frozen: only
@@ -21,18 +21,25 @@ template's words (cells A133 to A135):
 > are added. Requests for new features are taken for the code version, not for
 > this sheet.
 >
-> A code version (Python and Rust) is in development. It will take inputs this
-> sheet cannot (e.g., age, breed, whether a nutrient is added as an additive)
-> and will say when a result depends on an input that is not known.
+> The code version, the Open Animal Nutrition checker, is live at
+> https://openanimalnutrition.org/ (for people) and
+> https://checker.openanimalnutrition.org/mcp (for AI systems, no sign-in).
+> For each nutrient it names the facts a result depends on that it does not
+> take as inputs (e.g., age, breed, whether a nutrient is added as an
+> additive).
 >
-> The code version becomes the reference once it reproduces this sheet's
-> published test cases; until then this sheet remains the reference. For its
-> status and the Open Animal Nutrition FHIR Implementation Guide, see
-> https://github.com/openanimalnutrition (openanimalnutrition.org is the
-> planned future address).
+> Since 24 Oct 2026 (checker release 0.5.0), the checker, not this sheet, is
+> the reference implementation of the computation proposed by Open Animal
+> Nutrition; its verdicts deficient and excess remain the provisional
+> steward's proposal, pending ratification. Run with this sheet's rules, it
+> reproduces this sheet. Its own rules, where they differ from this sheet's
+> and why, and the Open Animal Nutrition FHIR Implementation Guide are at
+> https://github.com/openanimalnutrition.
 
-- **The code version is now the reference.** The condition above has been
-  met. The code version (Python), the
+- **The template is retired.** It is no longer changed, although cell A133
+  still describes error corrections: corrections are made in the checker and
+  recorded in its changes document.
+- **The code version is the reference.** The code version (Python), the
   [checker](https://github.com/openanimalnutrition/animal-nutrition-checker),
   run with the template's rules, which it keeps for this check, gives the
   template's results on its released test cases, and the provisional steward
@@ -47,8 +54,11 @@ template's words (cells A133 to A135):
   `deficient` or `excess` is the provisional steward's proposal, pending
   ratification by the governance body, in the code version as on the
   [Decile Basis and Band Computation](band-computation.html) page.
-- **Errors** in the template, or differences between it and this guide, can
-  be reported in the guide's
+- **Errors** in a value or a rule are corrected in the checker: report them
+  with the issue forms in the
+  [checker's repository](https://github.com/openanimalnutrition/animal-nutrition-checker/issues/new/choose).
+  Differences between the checker and this guide can be reported in the
+  guide's
   [source repository](https://github.com/openanimalnutrition/animal-nutrition-ig).
 
 ### Standards
@@ -149,7 +159,7 @@ version label is in its cell A1. Known errors in earlier versions:
   minimums (from 10% to 100% of the expected mature body weight), and above about 88% of the expected mature
   body weight the calcium MBW minimum passes NRC's 4.5 g/Mcal safe upper
   limit, so no diet meets both rows. In such a copy, use the per-Mcal rows
-  under these three selections and disregard their MBW rows, or use Version 21OCT26b, which has no MBW values for them.
+  under these three selections and disregard their MBW rows, or use Version 21OCT26c, which has no MBW values for them.
 - **Wording of four texts (Version 21OCT26).** Status items 6 and 7 (cells
   A145 and A146) and the notes on cells AG3 and AQ3 of the Healthy Dog Cat
   Reqt Data tab say per kg body weight for values per kg BW^0.75 or BW^0.67.
@@ -157,4 +167,4 @@ version label is in its cell A1. Known errors in earlier versions:
 
 The template's History of Change(s) tab lists every change in each version,
 and the [Decile Basis and Band Computation](band-computation.html#earlier-versions)
-page summarizes the changes in Versions 21OCT26 and 21OCT26b.
+page summarizes the changes in Versions 21OCT26, 21OCT26b and 21OCT26c.

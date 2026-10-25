@@ -11,8 +11,9 @@ remains open (component slicing, and nutrient and species bindings). The decile
 basis, the band computation and the adequacy interpretation rules are stated,
 proposed and pending ratification, in `input/pagecontent/band-computation.md`;
 issue #4 tracks ratification. That page follows the source template's Version 21OCT26b, an error-fix
-version of 21OCT26, its final feature version (frozen except for error
-fixes); the
+version of 21OCT26, its final feature version (now retired: its last version,
+21OCT26c, changed only its status text, and corrections are made in the
+checker); the
 template's status and known limitations are in
 `input/pagecontent/known-limitations.md`. The code version, the
 [checker](https://github.com/openanimalnutrition/animal-nutrition-checker),
