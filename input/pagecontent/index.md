@@ -1,6 +1,6 @@
 ### Open Animal Nutrition — Adequacy Interoperability Guide
 
-**Status: v0.1 draft (ci-build). Unvalidated scaffold.**
+**Status: draft. Unvalidated scaffold.**
 
 #### What this is
 
@@ -56,12 +56,12 @@ The template's status,
 its known limitations and the errata for earlier versions are on the
 [Template Status and Known Limitations](known-limitations.html) page.
 
-The checker runs at [openanimalnutrition.org](https://openanimalnutrition.org/)
-(for AI systems: https://checker.openanimalnutrition.org/mcp). This guide is
-not yet published there: for now its address is
-[github.com/openanimalnutrition](https://github.com/openanimalnutrition), and
-its canonical URLs, under openanimalnutrition.org/fhir/animal-nutrition, are
-its planned address.
+The project's homepage is [openanimalnutrition.org](https://openanimalnutrition.org/).
+The checker runs at
+[checker.openanimalnutrition.org](https://checker.openanimalnutrition.org/)
+(for AI systems: https://checker.openanimalnutrition.org/mcp). This guide's
+source is at
+[github.com/openanimalnutrition](https://github.com/openanimalnutrition).
 
 #### Scope (v0.1)
 

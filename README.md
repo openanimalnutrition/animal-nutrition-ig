@@ -22,9 +22,9 @@ since 24 October 2026, from its release 0.5.0; its rules that differ from the
 template's are proposed, pending ratification, and listed in its
 [changes document](https://github.com/openanimalnutrition/animal-nutrition-checker/blob/main/docs/changes-from-21OCT26b.md).
 
-The project's address is https://github.com/openanimalnutrition for now;
-openanimalnutrition.org, the domain of the canonical URL below, is the planned
-future address.
+The project's homepage is https://openanimalnutrition.org/. This guide is
+published at its canonical URL, https://openanimalnutrition.org/fhir/animal-nutrition,
+where its version history lists every release.
 
 ## Locked configuration
 - canonical: `https://openanimalnutrition.org/fhir/animal-nutrition`
@@ -49,6 +49,7 @@ sushi .
 ## Layout
 ```
 sushi-config.yaml
+publication-request.json # the version and description of the next release
 input/
   fsh/
     profiles.fsh        # AnimalNutrientAdequacy (Observation profile)

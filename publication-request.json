@@ -1,0 +1,17 @@
+{
+  "package-id" : "openanimalnutrition.fhir.animalnutrition",
+  "version" : "0.1.0",
+  "path" : "https://openanimalnutrition.org/fhir/animal-nutrition/0.1.0",
+  "mode" : "milestone",
+  "status" : "draft",
+  "sequence" : "Pre-ratification",
+  "desc" : "First published version, a draft. Its rules are the provisional steward's proposal, pending ratification by a governance body that has not yet been formed.",
+  "first" : true,
+  "title" : "Open Animal Nutrition — Adequacy Interoperability Guide",
+  "introduction" : "An open, FHIR-based way to represent and verify the nutritional adequacy of an animal diet against published requirement standards (NRC, AAFCO, FEDIAF), on a common mathematical basis. Versions before 1.0.0 are drafts: their rules are the provisional steward's proposal, pending ratification by a governance body.",
+  "category" : "Clinical Observations",
+  "ci-build" : "https://github.com/openanimalnutrition/animal-nutrition-ig",
+  "registry-description" : "Verifying the nutritional adequacy of an animal diet against published requirement standards (NRC, AAFCO, FEDIAF) on a common mathematical basis.",
+  "registry-country" : "uv",
+  "registry-authority" : "Open Animal Nutrition"
+}
