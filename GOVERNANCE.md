@@ -107,12 +107,19 @@ Template: https://docs.google.com/spreadsheets/d/1_NlceDeCp123h18wivMIScsy4GsCH7
 
 These three items are the governance body's standing first agenda.
 
+## Joining the governance body
+The governance body is being formed. To take part, or to suggest someone, email
+openanimalnutrition@dvmconsulting.com. The address is the provisional steward's
+for now; when the governance body forms, it moves to an address on a domain the
+steward does not control.
+
 ## Challenging a rule
 To challenge a rule of this standard or of its reference checker, or to report
 a data error, use the issue forms in the checker's repository:
 https://github.com/openanimalnutrition/animal-nutrition-checker/issues/new/choose. Everything in an
-issue is public. Without a GitHub account, email admin+oan@dvmconsulting.com,
-and the provisional steward files it as a public issue. The provisional steward
+issue is public. Without a GitHub account, email
+openanimalnutrition@dvmconsulting.com, and the provisional steward files it as
+a public issue. The provisional steward
 answers in the issue; once formed, the governance body decides.
 
 ## License
